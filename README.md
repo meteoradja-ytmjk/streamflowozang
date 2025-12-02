@@ -30,8 +30,10 @@ StreamFlow adalah aplikasi live streaming yang memungkinkan kamu melakukan live 
 Untuk instalasi otomatis, jalankan perintah berikut:
 
 ```bash
-curl -o install.sh https://raw.githubusercontent.com/bangtutorial/streamflow/main/install.sh && chmod +x install.sh && ./install.sh
+curl -o install.sh https://raw.githubusercontent.com/meteoradja-ytmjk/streamflowozang/main/install.sh && chmod +x install.sh && ./install.sh
 ```
+
+📖 **Panduan Lengkap**: Lihat [INSTALASI_VPS.md](INSTALASI_VPS.md) untuk panduan instalasi detail step-by-step.
 
 ## 🔧 Manual Installation
 
@@ -73,12 +75,12 @@ sudo apt install git -y
 
 Clone repository:
 ```bash
-git clone https://github.com/bangtutorial/streamflow
+git clone https://github.com/meteoradja-ytmjk/streamflowozang.git
 ```
 
 Masuk ke direktori project:
 ```bash
-cd streamflow
+cd streamflowozang
 ```
 
 Install Paket Node.JS:
