@@ -1,0 +1,222 @@
+<% layout('layout') -%>
+
+<div class="mb-6">
+  <div class="flex items-center justify-between">
+    <div>
+      <h1 class="text-2xl font-bold mb-2">Trash</h1>
+      <p class="text-gray-400 text-sm">Deleted streams are kept for 30 days before permanent deletion</p>
+    </div>
+    <div class="flex gap-3">
+      <button onclick="window.location.href='/dashboard'" 
+        class="px-4 py-2 bg-dark-700 hover:bg-dark-600 text-white rounded-lg transition-colors flex items-center gap-2">
+        <i class="ti ti-arrow-left"></i>
+        <span>Back to Dashboard</span>
+      </button>
+      <button onclick="emptyTrash()" 
+        class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors flex items-center gap-2">
+        <i class="ti ti-trash-x"></i>
+        <span>Empty Trash</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Trash Items -->
+<div class="bg-gray-800 rounded-lg shadow-md overflow-hidden">
+  <div class="overflow-x-auto">
+    <table class="min-w-full">
+      <thead class="bg-gray-700">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Stream Name</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Deleted Date</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Days Left</th>
+          <th class="px-6 py-3 text-right text-xs font-medium text-gray-300 uppercase tracking-wider">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="trashTableBody" class="divide-y divide-gray-700">
+        <tr id="empty-state">
+          <td colspan="4" class="px-6 py-10 text-center">
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 rounded-full bg-dark-700 flex items-center justify-center mb-4">
+                <i class="ti ti-trash text-gray-500 text-2xl"></i>
+              </div>
+              <p class="text-gray-400 font-medium mb-2">Trash is empty</p>
+              <p class="text-gray-500">Deleted streams will appear here</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  // Load trash items
+  async function loadTrash() {
+    try {
+      const response = await fetch('/api/trash');
+      const data = await response.json();
+      
+      if (data.success) {
+        displayTrashItems(data.streams);
+      }
+    } catch (error) {
+      console.error('Error loading trash:', error);
+    }
+  }
+
+  function displayTrashItems(streams) {
+    const tbody = document.getElementById('trashTableBody');
+    const emptyState = document.getElementById('empty-state');
+    
+    if (!streams || streams.length === 0) {
+      emptyState.style.display = 'table-row';
+      return;
+    }
+    
+    emptyState.style.display = 'none';
+    
+    // Remove existing rows except empty state
+    Array.from(tbody.children).forEach(row => {
+      if (row.id !== 'empty-state') row.remove();
+    });
+    
+    streams.forEach(stream => {
+      const row = createTrashRow(stream);
+      tbody.insertBefore(row, emptyState);
+    });
+  }
+
+  function createTrashRow(stream) {
+    const row = document.createElement('tr');
+    row.className = 'hover:bg-dark-700/50 transition-colors';
+    
+    const deletedDate = new Date(stream.deleted_at);
+    const now = new Date();
+    const daysAgo = Math.floor((now - deletedDate) / (1000 * 60 * 60 * 24));
+    const daysLeft = Math.max(0, 30 - daysAgo);
+    
+    const thumbnail = stream.thumbnail_path || '/images/default-video-thumbnail.svg';
+    
+    row.innerHTML = `
+      <td class="px-6 py-4">
+        <div class="flex items-center">
+          <div class="w-20 h-12 bg-dark-700 rounded flex-shrink-0 overflow-hidden mr-3">
+            <img src="${thumbnail}" class="w-full h-full object-cover" alt="${stream.title}">
+          </div>
+          <div>
+            <div class="text-sm font-medium">${stream.title}</div>
+            <div class="text-xs text-gray-400">${stream.video_title || 'Unknown video'}</div>
+          </div>
+        </div>
+      </td>
+      <td class="px-6 py-4">
+        <div class="text-sm text-gray-400">${formatDate(deletedDate)}</div>
+        <div class="text-xs text-gray-500">${daysAgo} day(s) ago</div>
+      </td>
+      <td class="px-6 py-4">
+        <div class="text-sm ${daysLeft <= 7 ? 'text-red-400' : 'text-gray-400'}">
+          ${daysLeft} day(s)
+        </div>
+      </td>
+      <td class="px-6 py-4 text-right">
+        <div class="flex items-center justify-end gap-2">
+          <button onclick="restoreStream('${stream.id}')" 
+            class="px-3 py-1.5 bg-primary hover:bg-red-600 text-white text-xs rounded transition-colors">
+            <i class="ti ti-restore mr-1"></i>
+            Restore
+          </button>
+          <button onclick="permanentDelete('${stream.id}')" 
+            class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs rounded transition-colors">
+            <i class="ti ti-trash-x mr-1"></i>
+            Delete Forever
+          </button>
+        </div>
+      </td>
+    `;
+    
+    return row;
+  }
+
+  function formatDate(date) {
+    return date.toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric', 
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  }
+
+  async function restoreStream(streamId) {
+    if (!confirm('Restore this stream?')) return;
+    
+    try {
+      const response = await fetch(`/api/trash/restore/${streamId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        alert('Stream restored successfully!');
+        loadTrash();
+      } else {
+        alert('Error: ' + (data.error || 'Failed to restore stream'));
+      }
+    } catch (error) {
+      console.error('Error restoring stream:', error);
+      alert('An error occurred while restoring the stream');
+    }
+  }
+
+  async function permanentDelete(streamId) {
+    if (!confirm('Permanently delete this stream? This action cannot be undone!')) return;
+    
+    try {
+      const response = await fetch(`/api/trash/${streamId}`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        alert('Stream permanently deleted');
+        loadTrash();
+      } else {
+        alert('Error: ' + (data.error || 'Failed to delete stream'));
+      }
+    } catch (error) {
+      console.error('Error deleting stream:', error);
+      alert('An error occurred while deleting the stream');
+    }
+  }
+
+  async function emptyTrash() {
+    if (!confirm('Permanently delete ALL streams in trash? This action cannot be undone!')) return;
+    
+    try {
+      const response = await fetch('/api/trash/empty', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        alert(`Permanently deleted ${data.deleted} stream(s)`);
+        loadTrash();
+      } else {
+        alert('Error: ' + (data.error || 'Failed to empty trash'));
+      }
+    } catch (error) {
+      console.error('Error emptying trash:', error);
+      alert('An error occurred while emptying trash');
+    }
+  }
+
+  // Load trash on page load
+  document.addEventListener('DOMContentLoaded', loadTrash);
+</script>

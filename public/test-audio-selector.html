@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Audio Selector</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body class="bg-gray-900 text-white p-8">
+  <h1 class="text-2xl mb-4">Test Audio API</h1>
+  
+  <button onclick="testAudioAPI()" class="bg-blue-600 px-4 py-2 rounded mb-4">
+    Test /api/audios
+  </button>
+  
+  <div id="result" class="bg-gray-800 p-4 rounded">
+    <p>Click button to test API</p>
+  </div>
+  
+  <script>
+    async function testAudioAPI() {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '<p>Loading...</p>';
+      
+      try {
+        console.log('Fetching /api/audios...');
+        const response = await fetch('/api/audios');
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
+        
+        const data = await response.json();
+        console.log('Response data:', data);
+        
+        resultDiv.innerHTML = `
+          <h3 class="font-bold mb-2">API Response:</h3>
+          <pre class="bg-gray-900 p-2 rounded overflow-auto">${JSON.stringify(data, null, 2)}</pre>
+          <p class="mt-2">Type: ${Array.isArray(data) ? 'Array' : typeof data}</p>
+          <p>Length: ${Array.isArray(data) ? data.length : 'N/A'}</p>
+        `;
+      } catch (error) {
+        console.error('Error:', error);
+        resultDiv.innerHTML = `
+          <p class="text-red-400">Error: ${error.message}</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

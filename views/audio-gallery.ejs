@@ -1,0 +1,453 @@
+<% layout('layout') -%>
+<% function formatDuration(seconds) { if (!seconds) return '00:00:00'; const hours=Math.floor(seconds / 3600); const minutes=Math.floor((seconds % 3600) / 60); const secs=Math.floor(seconds % 60); return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`; } %>
+
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+  <div>
+    <h2 class="text-2xl font-bold">Audio Gallery</h2>
+    <p class="text-gray-400 text-sm mt-1">Manage your audio files</p>
+  </div>
+  <div class="flex flex-wrap gap-3">
+    <button onclick="openUploadModal()"
+      class="flex items-center gap-2 bg-primary hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+      <i class="ti ti-upload"></i>
+      <span>Upload Audio</span>
+    </button>
+  </div>
+</div>
+
+<div class="bg-gray-800 rounded-lg p-4 mb-6">
+  <div class="flex flex-row items-center gap-3">
+    <div class="relative w-full sm:w-80 md:w-96">
+      <input type="text" id="searchInput" placeholder="Search audio..."
+        class="w-full bg-dark-700 text-white pl-9 pr-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+      <i class="ti ti-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="audioGrid">
+  <% if (audios && audios.length > 0) { %>
+    <% audios.forEach(function(audio) { %>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow audio-card">
+        <div class="aspect-video relative group bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+          <i class="ti ti-music text-6xl text-gray-400"></i>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <button
+              class="play-button bg-black/50 hover:bg-primary/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors transform hover:scale-110"
+              onclick="playAudio('<%= audio.id %>', '<%= audio.title %>')">
+              <i class="ti ti-player-play-filled text-2xl text-white"></i>
+            </button>
+          </div>
+          <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded">
+            <%= formatDuration(audio.duration) %>
+          </span>
+        </div>
+
+        <div class="p-3">
+          <h3 class="font-medium truncate mb-0.5">
+            <%= audio.title %>
+          </h3>
+          <div class="flex items-center justify-between">
+            <div class="text-xs text-gray-400 flex items-center">
+              <span><%= new Date(audio.created_at).toLocaleDateString() %></span>
+              <span class="mx-1">•</span>
+              <span><%= (audio.file_size / (1024 * 1024)).toFixed(1) %> MB</span>
+            </div>
+
+            <div class="flex">
+              <button class="text-gray-400 hover:text-white p-1"
+                onclick="showRenameDialog('<%= audio.id %>', '<%= audio.title %>')">
+                <i class="ti ti-pencil text-sm"></i>
+              </button>
+              <button class="text-gray-400 hover:text-red-400 p-1 ml-1"
+                onclick="showDeleteDialog('<%= audio.id %>', '<%= audio.title %>')">
+                <i class="ti ti-trash text-sm"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  <% } else { %>
+    <div class="col-span-full text-center py-12">
+      <div class="text-gray-500 mb-3">
+        <i class="ti ti-music text-6xl"></i>
+      </div>
+      <h3 class="text-xl font-medium text-gray-300 mb-1">No audio files yet</h3>
+      <p class="text-gray-500 mb-4">Upload your first audio file to get started</p>
+    </div>
+  <% } %>
+</div>
+
+<!-- Upload Modal -->
+<div id="uploadModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity">
+  <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-dark-800 rounded-lg shadow-xl w-full max-w-lg border border-gray-600/50 transform transition-all opacity-0 scale-95" id="uploadModalContent">
+      <div class="flex items-center justify-between p-4 border-b border-gray-600/50">
+        <h3 class="text-lg font-medium">Upload Audio</h3>
+        <button onclick="closeUploadModal()"
+          class="rounded-full w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700/50 transition-colors">
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+      
+      <div class="p-6">
+        <form id="audioUploadForm" enctype="multipart/form-data">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          
+          <div id="uploadDropzone"
+            class="border-2 border-dashed border-gray-600 hover:border-primary/70 rounded-lg py-8 px-6 text-center transition-all cursor-pointer">
+            <div class="flex flex-col items-center justify-center space-y-3">
+              <i class="ti ti-upload text-3xl text-gray-500"></i>
+              <div class="space-y-1">
+                <p class="text-gray-300">Drag and drop audio files here</p>
+                <p class="text-gray-500 text-sm">Or click to browse</p>
+              </div>
+              <label class="bg-primary hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors inline-block cursor-pointer">
+                <span>Select files</span>
+                <input type="file" name="audio" accept="audio/*" multiple class="hidden" id="audioFileInput">
+              </label>
+              <p class="text-gray-500 text-xs">Supported formats: MP3, WAV, OGG, AAC, FLAC, M4A</p>
+            </div>
+          </div>
+
+          <div id="selectedFileInfo" class="hidden mt-4">
+            <div class="bg-dark-700/50 p-4 rounded-lg border border-gray-600/50">
+              <div class="flex items-start justify-between mb-3">
+                <div class="flex items-center">
+                  <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center mr-3">
+                    <i class="ti ti-music text-red-400"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium">Selected Files</p>
+                    <p id="selectedFileCount" class="text-xs text-gray-400"></p>
+                  </div>
+                </div>
+                <button type="button" id="clearFileButton" class="text-gray-400 hover:text-white">
+                  <i class="ti ti-x"></i>
+                </button>
+              </div>
+              <div id="selectedFilesList" class="space-y-1 max-h-60 overflow-y-auto"></div>
+            </div>
+          </div>
+
+          <div class="mt-6 hidden" id="uploadProgress">
+            <div class="flex justify-between items-start text-sm mb-1.5">
+              <span id="uploadProgressStatus">Uploading files...</span>
+              <span id="uploadProgressPercent" class="text-red-400">0%</span>
+            </div>
+            <div class="w-full bg-dark-700 rounded-full h-2.5 overflow-hidden">
+              <div id="uploadProgressBar" class="bg-red-500 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="flex justify-end p-4 border-t border-gray-600/50">
+        <button onclick="closeUploadModal()"
+          class="px-4 py-2 bg-dark-700 hover:bg-dark-600 text-gray-300 rounded-lg transition-colors mr-3">
+          Cancel
+        </button>
+        <button id="uploadButton"
+          class="px-4 py-2 bg-primary hover:bg-red-600 text-white rounded-lg transition-colors disabled:bg-gray-600 disabled:cursor-not-allowed"
+          disabled>
+          Upload
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="fixed top-16 right-4 bg-dark-800 text-white px-4 py-3 rounded-lg shadow-lg z-50 hidden flex items-center">
+  <i id="toast-icon" class="mr-2"></i>
+  <span id="toast-message"></span>
+</div>
+
+<script>
+function showToast(type, message) {
+  const toast = document.getElementById('toast');
+  const toastIcon = document.getElementById('toast-icon');
+  const toastMessage = document.getElementById('toast-message');
+  
+  if (type === 'success') {
+    toastIcon.className = 'ti ti-check text-green-400 mr-2';
+  } else if (type === 'error') {
+    toastIcon.className = 'ti ti-x text-red-400 mr-2';
+  }
+  
+  toastMessage.textContent = message;
+  toast.classList.remove('hidden');
+  
+  setTimeout(() => {
+    toast.classList.add('hidden');
+  }, 3000);
+}
+
+function openUploadModal() {
+  const modal = document.getElementById('uploadModal');
+  const modalContent = document.getElementById('uploadModalContent');
+  modal.classList.remove('hidden');
+  setTimeout(() => {
+    modalContent.classList.remove('opacity-0', 'scale-95');
+    modalContent.classList.add('opacity-100', 'scale-100');
+  }, 10);
+  document.body.classList.add('overflow-hidden');
+}
+
+function closeUploadModal() {
+  const modal = document.getElementById('uploadModal');
+  const modalContent = document.getElementById('uploadModalContent');
+  modalContent.classList.remove('opacity-100', 'scale-100');
+  modalContent.classList.add('opacity-0', 'scale-95');
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  }, 200);
+  resetUploadForm();
+}
+
+function resetUploadForm() {
+  document.getElementById('audioUploadForm').reset();
+  document.getElementById('selectedFileInfo').classList.add('hidden');
+  document.getElementById('uploadDropzone').classList.remove('hidden');
+  document.getElementById('uploadProgress').classList.add('hidden');
+  document.getElementById('uploadButton').disabled = true;
+}
+
+function playAudio(audioId, audioTitle) {
+  const modal = document.createElement('div');
+  modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm';
+  modal.id = 'audio-player-modal';
+  modal.innerHTML = `
+    <div class="relative w-full max-w-md mx-auto">
+      <div class="bg-dark-800 rounded-lg overflow-hidden shadow-xl">
+        <div class="flex items-center justify-between p-4 border-b border-gray-600">
+          <h3 class="text-lg font-medium">${audioTitle}</h3>
+          <button id="close-player-btn" class="rounded-full w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
+            <i class="ti ti-x"></i>
+          </button>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+              <i class="ti ti-music text-6xl text-gray-400"></i>
+            </div>
+          </div>
+          <audio id="audio-player" class="w-full" controls autoplay>
+            <source src="/audio-stream/${audioId}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  document.body.classList.add('overflow-hidden');
+  
+  document.getElementById('close-player-btn').addEventListener('click', function() {
+    const audioElement = document.getElementById('audio-player');
+    if (audioElement) audioElement.pause();
+    modal.remove();
+    document.body.classList.remove('overflow-hidden');
+  });
+  
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      const audioElement = document.getElementById('audio-player');
+      if (audioElement) audioElement.pause();
+      modal.remove();
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+}
+
+function showDeleteDialog(audioId, audioTitle) {
+  if (confirm(`Are you sure you want to delete "${audioTitle}"?`)) {
+    fetch(`/api/audios/${audioId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        showToast('success', 'Audio deleted successfully');
+        setTimeout(() => window.location.reload(), 1000);
+      } else {
+        showToast('error', data.error || 'Failed to delete audio');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      showToast('error', 'An error occurred while deleting the audio');
+    });
+  }
+}
+
+function showRenameDialog(audioId, currentTitle) {
+  const newTitle = prompt('Enter a new title for the audio:', currentTitle);
+  if (newTitle && newTitle !== currentTitle) {
+    fetch(`/api/audios/${audioId}/rename`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ title: newTitle })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        showToast('success', 'Audio renamed successfully');
+        setTimeout(() => window.location.reload(), 1000);
+      } else {
+        showToast('error', data.error || 'Failed to rename audio');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      showToast('error', 'An error occurred while renaming the audio');
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const audioFileInput = document.getElementById('audioFileInput');
+  const selectedFileInfo = document.getElementById('selectedFileInfo');
+  const selectedFileCount = document.getElementById('selectedFileCount');
+  const selectedFilesList = document.getElementById('selectedFilesList');
+  const clearFileButton = document.getElementById('clearFileButton');
+  const uploadDropzone = document.getElementById('uploadDropzone');
+  const uploadButton = document.getElementById('uploadButton');
+  const uploadProgress = document.getElementById('uploadProgress');
+  const uploadProgressBar = document.getElementById('uploadProgressBar');
+  const uploadProgressPercent = document.getElementById('uploadProgressPercent');
+  const uploadProgressStatus = document.getElementById('uploadProgressStatus');
+  
+  let selectedFiles = [];
+  
+  audioFileInput.addEventListener('change', function(e) {
+    selectedFiles = Array.from(e.target.files);
+    updateFileList();
+  });
+  
+  uploadDropzone.addEventListener('click', function() {
+    audioFileInput.click();
+  });
+  
+  uploadDropzone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    this.classList.add('border-primary', 'bg-primary/5');
+  });
+  
+  uploadDropzone.addEventListener('dragleave', function(e) {
+    e.preventDefault();
+    this.classList.remove('border-primary', 'bg-primary/5');
+  });
+  
+  uploadDropzone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    this.classList.remove('border-primary', 'bg-primary/5');
+    selectedFiles = Array.from(e.dataTransfer.files);
+    updateFileList();
+  });
+  
+  clearFileButton.addEventListener('click', function() {
+    selectedFiles = [];
+    audioFileInput.value = '';
+    updateFileList();
+  });
+  
+  function updateFileList() {
+    if (selectedFiles.length > 0) {
+      selectedFileInfo.classList.remove('hidden');
+      uploadDropzone.classList.add('hidden');
+      uploadButton.disabled = false;
+      
+      selectedFileCount.textContent = `${selectedFiles.length} file(s) selected`;
+      selectedFilesList.innerHTML = selectedFiles.map((file, index) => `
+        <div class="flex items-center justify-between text-sm py-1">
+          <span class="truncate">${file.name}</span>
+          <span class="text-gray-400 ml-2">${(file.size / (1024 * 1024)).toFixed(1)} MB</span>
+        </div>
+      `).join('');
+    } else {
+      selectedFileInfo.classList.add('hidden');
+      uploadDropzone.classList.remove('hidden');
+      uploadButton.disabled = true;
+    }
+  }
+  
+  uploadButton.addEventListener('click', async function() {
+    if (selectedFiles.length === 0) return;
+    
+    uploadButton.disabled = true;
+    uploadProgress.classList.remove('hidden');
+    selectedFileInfo.classList.add('hidden');
+    
+    let uploadedCount = 0;
+    const totalFiles = selectedFiles.length;
+    
+    for (const file of selectedFiles) {
+      const formData = new FormData();
+      formData.append('audio', file);
+      formData.append('_csrf', document.querySelector('input[name="_csrf"]').value);
+      
+      try {
+        uploadProgressStatus.textContent = `Uploading ${file.name}...`;
+        
+        const response = await fetch('/api/audios/upload', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          uploadedCount++;
+          const progress = Math.round((uploadedCount / totalFiles) * 100);
+          uploadProgressBar.style.width = progress + '%';
+          uploadProgressPercent.textContent = progress + '%';
+        } else {
+          showToast('error', `Failed to upload ${file.name}: ${result.error}`);
+        }
+      } catch (error) {
+        console.error('Upload error:', error);
+        showToast('error', `Error uploading ${file.name}`);
+      }
+    }
+    
+    if (uploadedCount === totalFiles) {
+      showToast('success', `Successfully uploaded ${uploadedCount} audio file(s)`);
+      setTimeout(() => {
+        closeUploadModal();
+        window.location.reload();
+      }, 1500);
+    } else {
+      showToast('warning', `Uploaded ${uploadedCount} of ${totalFiles} files`);
+      setTimeout(() => {
+        closeUploadModal();
+        window.location.reload();
+      }, 2000);
+    }
+  });
+  
+  // Search functionality
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const audioCards = document.querySelectorAll('.audio-card');
+    
+    audioCards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      if (title.includes(searchTerm)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>

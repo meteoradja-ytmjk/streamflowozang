@@ -1,0 +1,249 @@
+<% layout('layout') -%>
+
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+  <div>
+    <h2 class="text-2xl font-bold">Recurring Schedules</h2>
+    <p class="text-gray-400 text-sm mt-1">Automate your streaming schedule</p>
+  </div>
+  <button onclick="openCreateScheduleModal()"
+    class="flex items-center gap-2 bg-primary hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-colors">
+    <i class="ti ti-calendar-plus"></i>
+    <span>Create Schedule</span>
+  </button>
+</div>
+
+<!-- Statistics Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+  <div class="bg-gray-800 rounded-lg p-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-400 text-sm">Active Templates</p>
+        <p class="text-2xl font-bold mt-1" id="stat-active">0</p>
+      </div>
+      <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
+        <i class="ti ti-calendar-check text-red-400 text-2xl"></i>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-gray-800 rounded-lg p-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-400 text-sm">Upcoming</p>
+        <p class="text-2xl font-bold mt-1" id="stat-upcoming">0</p>
+      </div>
+      <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
+        <i class="ti ti-clock text-green-400 text-2xl"></i>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-gray-800 rounded-lg p-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-400 text-sm">Completed</p>
+        <p class="text-2xl font-bold mt-1" id="stat-completed">0</p>
+      </div>
+      <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center">
+        <i class="ti ti-check text-purple-400 text-2xl"></i>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bg-gray-800 rounded-lg p-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-400 text-sm">Failed</p>
+        <p class="text-2xl font-bold mt-1" id="stat-failed">0</p>
+      </div>
+      <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
+        <i class="ti ti-alert-circle text-red-400 text-2xl"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="bg-gray-800 rounded-lg mb-6">
+  <div class="border-b border-gray-700">
+    <nav class="flex space-x-4 px-4" role="tablist">
+      <button class="tab-button active py-3 px-2 border-b-2 border-primary text-primary font-medium" 
+              onclick="switchTab('templates')" data-tab="templates">
+        Templates
+      </button>
+      <button class="tab-button py-3 px-2 border-b-2 border-transparent text-gray-400 hover:text-white font-medium" 
+              onclick="switchTab('upcoming')" data-tab="upcoming">
+        Upcoming
+      </button>
+      <button class="tab-button py-3 px-2 border-b-2 border-transparent text-gray-400 hover:text-white font-medium" 
+              onclick="switchTab('history')" data-tab="history">
+        History
+      </button>
+    </nav>
+  </div>
+</div>
+
+<!-- Templates Tab -->
+<div id="templates-tab" class="tab-content">
+  <div class="grid grid-cols-1 gap-4" id="templates-list">
+    <!-- Templates will be loaded here -->
+  </div>
+</div>
+
+<!-- Upcoming Tab -->
+<div id="upcoming-tab" class="tab-content hidden">
+  <div class="space-y-4" id="upcoming-list">
+    <!-- Upcoming streams will be loaded here -->
+  </div>
+</div>
+
+<!-- History Tab -->
+<div id="history-tab" class="tab-content hidden">
+  <div class="space-y-4" id="history-list">
+    <!-- History will be loaded here -->
+  </div>
+</div>
+
+<!-- Create/Edit Schedule Modal -->
+<div id="scheduleModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden">
+  <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-dark-800 rounded-lg shadow-xl w-full max-w-2xl border border-gray-600/50">
+      <div class="flex items-center justify-between p-4 border-b border-gray-600/50">
+        <h3 class="text-lg font-medium" id="modal-title">Create Recurring Schedule</h3>
+        <button onclick="closeScheduleModal()" class="rounded-full w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700/50 transition-colors">
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+      
+      <div class="p-6">
+        <form id="scheduleForm">
+          <input type="hidden" id="scheduleId" name="scheduleId">
+          
+          <div class="space-y-4">
+            <!-- Name -->
+            <div>
+              <label class="text-sm font-medium text-white block mb-2">Schedule Name</label>
+              <input type="text" id="scheduleName" name="name" required
+                class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary"
+                placeholder="e.g., Daily Morning Stream">
+            </div>
+            
+            <!-- Stream Selection -->
+            <div>
+              <label class="text-sm font-medium text-white block mb-2">Select Stream</label>
+              <select id="scheduleStream" name="streamId" required
+                class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+                <option value="">Choose a stream...</option>
+              </select>
+            </div>
+            
+            <!-- Recurrence Type -->
+            <div>
+              <label class="text-sm font-medium text-white block mb-2">Recurrence</label>
+              <select id="recurrenceType" name="recurrenceType" required onchange="handleRecurrenceChange()"
+                class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+                <option value="once">Once</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
+            
+            <!-- Days of Week (for weekly) -->
+            <div id="weeklyDaysContainer" class="hidden">
+              <label class="text-sm font-medium text-white block mb-2">Days of Week</label>
+              <div class="flex flex-wrap gap-2">
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="0" class="mr-2">
+                  <span class="text-sm">Sunday</span>
+                </label>
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="1" class="mr-2">
+                  <span class="text-sm">Monday</span>
+                </label>
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="2" class="mr-2">
+                  <span class="text-sm">Tuesday</span>
+                </label>
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="3" class="mr-2">
+                  <span class="text-sm">Wednesday</span>
+                </label>
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="4" class="mr-2">
+                  <span class="text-sm">Thursday</span>
+                </label>
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="5" class="mr-2">
+                  <span class="text-sm">Friday</span>
+                </label>
+                <label class="flex items-center bg-dark-700 px-3 py-2 rounded-lg cursor-pointer hover:bg-dark-600">
+                  <input type="checkbox" name="recurrenceDays" value="6" class="mr-2">
+                  <span class="text-sm">Saturday</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Start Time -->
+            <div>
+              <label class="text-sm font-medium text-white block mb-2">Start Time</label>
+              <input type="time" id="startTime" name="startTime" required
+                class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+            
+            <!-- Duration -->
+            <div>
+              <label class="text-sm font-medium text-white block mb-2">Duration</label>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="text-xs text-gray-400 block mb-1">Hours</label>
+                  <input type="number" id="durationHours" name="durationHours" min="0" max="24" value="1"
+                    class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary"
+                    placeholder="0">
+                </div>
+                <div>
+                  <label class="text-xs text-gray-400 block mb-1">Minutes</label>
+                  <input type="number" id="durationMinutesInput" name="durationMinutesInput" min="0" max="59" value="0"
+                    class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary"
+                    placeholder="0">
+                </div>
+              </div>
+              <p class="text-xs text-gray-400 mt-1">
+                <i class="ti ti-info-circle mr-1"></i>
+                Total: <span id="totalDuration">1 hour 0 minutes</span>
+              </p>
+            </div>
+            
+            <!-- End Date (optional) -->
+            <div>
+              <label class="text-sm font-medium text-white block mb-2">
+                End Date (Optional)
+                <span class="text-gray-400 text-xs ml-1">Leave empty for no end date</span>
+              </label>
+              <input type="date" id="endDate" name="endDate"
+                class="w-full bg-dark-700 text-white px-4 py-2.5 border border-gray-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="flex justify-end gap-3 p-4 border-t border-gray-600/50">
+        <button onclick="closeScheduleModal()" class="px-4 py-2 bg-dark-700 hover:bg-dark-600 text-gray-300 rounded-lg transition-colors">
+          Cancel
+        </button>
+        <button onclick="saveSchedule()" class="px-4 py-2 bg-primary hover:bg-red-600 text-white rounded-lg transition-colors">
+          <i class="ti ti-check mr-2"></i>
+          Save Schedule
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toast" class="fixed top-16 right-4 bg-dark-800 text-white px-4 py-3 rounded-lg shadow-lg z-50 hidden flex items-center">
+  <i id="toast-icon" class="mr-2"></i>
+  <span id="toast-message"></span>
+</div>
+
+<script src="/js/schedules.js"></script>

@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left circular arc -->
+  <path d="M 8 24 A 16 16 0 0 1 24 8" stroke="#E53935" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 12 24 A 12 12 0 0 1 24 12" stroke="#E53935" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Right signal waves -->
+  <path d="M 85 12 Q 90 12 95 8" stroke="#E53935" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 85 18 Q 92 18 100 12" stroke="#E53935" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 85 24 Q 94 24 105 16" stroke="#E53935" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- LIVE text -->
+  <text x="30" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#E53935" letter-spacing="2">LIVE</text>
+  
+  <!-- STREAMING badge -->
+  <rect x="62" y="28" width="52" height="12" rx="6" fill="#2C2C2C"/>
+  <text x="88" y="37" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">STREAMING</text>
+</svg>
