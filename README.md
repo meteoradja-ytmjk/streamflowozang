@@ -1,306 +1,150 @@
-![logo](https://github.com/user-attachments/assets/50231124-d546-43cb-9cf4-7a06a1dad5bd)
+# ✅ Panduan Instalasi StreamFlow - FINAL
 
-# StreamFlow v2.1: Fresh From The Oven 🔥
+## 🎯 Repository GitHub Anda
+**https://github.com/meteoradja-ytmjk/streamflowozang**
 
-StreamFlow adalah aplikasi live streaming yang memungkinkan kamu melakukan live streaming ke berbagai platform seperti YouTube, Facebook, dan platform lainnya menggunakan protokol RTMP. Aplikasi ini dapat berjalan di VPS (Virtual Private Server) dan mendukung streaming ke banyak platform secara bersamaan.
+---
 
-![Untitled-2](https://github.com/user-attachments/assets/3d7bb367-a1b2-43a5-839b-b6aa8dd5de90)
+## 📚 Dokumentasi yang Tersedia
 
-## ✨ Fitur Utama
+### 1. **INSTALASI_VPS.md** ⭐ (UTAMA)
+Panduan lengkap instalasi di VPS dengan:
+- ✅ Instalasi otomatis (1 command)
+- ✅ Instalasi manual step-by-step
+- ✅ Konfigurasi firewall
+- ✅ Setup PM2 auto-restart
+- ✅ Troubleshooting lengkap
+- ✅ Monitoring & maintenance
+- ✅ Security best practices
 
-- **Multi-Platform Streaming** - Streaming ke berbagai platform populer secara bersamaan
-- **Video Gallery** - Kelola koleksi video dengan antarmuka yang intuitif
-- **Upload Video** - Upload dari local storage atau import langsung dari Google Drive
-- **Scheduled Streaming** - Jadwalkan streaming dengan pengaturan waktu yang fleksibel
-- **Advanced Settings** - Kontrol penuh untuk bitrate, resolusi, FPS, dan orientasi video
-- **Real-time Monitoring** - Monitor status streaming dengan dashboard real-time
-- **Video Analytics** - Pantau statistik dan performa video langsung dari aplikasi
-- **Responsive UI** - Antarmuka modern yang responsif di semua perangkat
+**Link**: https://github.com/meteoradja-ytmjk/streamflowozang/blob/main/INSTALASI_VPS.md
 
-## 🛠️ System Requirements
+### 2. **README.md**
+Dokumentasi utama dengan overview fitur dan quick start
 
-- **Node.js** v20 atau versi terbaru
-- **FFmpeg** untuk video processing
-- **SQLite3** (sudah termasuk dalam package)
-- **VPS/Server** dengan minimal 1 Core CPU & 1GB RAM
-- **Port** 7575 (dapat disesuaikan di file [.env](.env))
+**Link**: https://github.com/meteoradja-ytmjk/streamflowozang/blob/main/README.md
 
-## ⚡ Quick Installation
+### 3. **INSTALLATION_GUIDE.md**
+Panduan instalasi original dari Bang Tutorial
 
-Untuk instalasi otomatis, jalankan perintah berikut:
+---
+
+## 🚀 Cara Install di VPS (Quick Start)
+
+### Opsi 1: Instalasi Otomatis (Termudah)
 
 ```bash
 curl -o install.sh https://raw.githubusercontent.com/meteoradja-ytmjk/streamflowozang/main/install.sh && chmod +x install.sh && ./install.sh
 ```
 
-📖 **Panduan Lengkap**: Lihat [INSTALASI_VPS.md](INSTALASI_VPS.md) untuk panduan instalasi detail step-by-step.
+### Opsi 2: Instalasi Manual
 
-## 🔧 Manual Installation
-
-### 1. Persiapan Server
-
-Update sistem operasi:
 ```bash
+# 1. Update sistem
 sudo apt update && sudo apt upgrade -y
-```
 
-Install Node.js:
-```bash
+# 2. Install Node.js v22
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs
-```
 
-Verifikasi instalasi Node.js:
-```bash
-node --version
-npm --version
-```
+# 3. Install FFmpeg & Git
+sudo apt install ffmpeg git -y
 
-Install FFmpeg:
-```bash
-sudo apt install ffmpeg -y
-```
-
-Verifikasi instalasi FFmpeg:
-```bash
-ffmpeg -version
-```
-
-Install Git:
-```bash
-sudo apt install git -y
-```
-
-### 2. Setup Project StreamFlow
-
-Clone repository:
-```bash
+# 4. Clone repository
 git clone https://github.com/meteoradja-ytmjk/streamflowozang.git
-```
-
-Masuk ke direktori project:
-```bash
 cd streamflowozang
-```
 
-Install Paket Node.JS:
-```bash
+# 5. Install dependencies
 npm install
-```
 
-**PENTING: Generate Secret Key Baru!**
-```bash
+# 6. Generate secret key (PENTING!)
 node generate-secret.js
-```
-> ⚠️ **WAJIB** generate secret key baru untuk keamanan aplikasi!
 
-Konfigurasi port (opsional):
-```bash
-nano .env
-```
-
-Jalankan aplikasi:
-```bash
-npm run dev
-```
-
-### 3. Konfigurasi Firewall
-
-**PENTING: Buka port SSH terlebih dahulu untuk menghindari terputusnya koneksi!**
-
-Buka port SSH (biasanya port 22):
-```bash
+# 7. Setup firewall
 sudo ufw allow ssh
-# atau jika menggunakan port custom SSH
-# sudo ufw allow [PORT_SSH_ANDA]
-```
-
-Buka port aplikasi (default: 7575):
-```bash
 sudo ufw allow 7575
-```
-
-Verifikasi aturan firewall sebelum mengaktifkan:
-```bash
-sudo ufw status verbose
-```
-
-Aktifkan firewall:
-```bash
 sudo ufw enable
-```
 
-Verifikasi status firewall setelah aktif:
-```bash
-sudo ufw status
-```
-
-### 4. Install Process Manager
-
-Install PM2 untuk mengelola aplikasi:
-```bash
+# 8. Install PM2
 sudo npm install -g pm2
-```
 
-### 5. Menjalankan Aplikasi
-
-Jalankan aplikasi dengan PM2:
-```bash
+# 9. Start aplikasi
 pm2 start app.js --name streamflow
-```
-
-**Setup Auto-Restart saat Server Reboot:**
-```bash
-# Simpan konfigurasi PM2 saat ini
-pm2 save
-
-# Setup PM2 untuk auto-start saat server restart
 pm2 startup
-
-# Ikuti instruksi yang muncul, biasanya berupa command yang harus dijalankan dengan sudo
-# Contoh output: sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u username --hp /home/username
-
-# Setelah menjalankan command startup, save kembali
 pm2 save
+
+# 10. Akses aplikasi
+# http://IP_VPS:7575
 ```
 
-**Perintah PM2 Berguna:**
+---
+
+## 📖 Panduan Lengkap
+
+Untuk panduan detail dengan troubleshooting dan tips keamanan, buka:
+
+**📄 [INSTALASI_VPS.md](https://github.com/meteoradja-ytmjk/streamflowozang/blob/main/INSTALASI_VPS.md)**
+
+---
+
+## 🎯 Setelah Instalasi
+
+1. **Akses aplikasi**: `http://IP_VPS:7575`
+2. **Buat akun admin**: Sign Up → isi form
+3. **Upload video**: Menu Gallery → Upload Video
+4. **Buat stream**: Menu Dashboard → New Stream
+5. **Set timezone**: `sudo timedatectl set-timezone Asia/Jakarta`
+
+---
+
+## 🔧 Perintah Penting
+
 ```bash
-# Lihat status aplikasi
+# Check status
 pm2 status
 
 # Restart aplikasi
 pm2 restart streamflow
 
-# Stop aplikasi
-pm2 stop streamflow
-
-# Lihat logs aplikasi
+# Lihat logs
 pm2 logs streamflow
 
-# Monitor resource usage
-pm2 monit
-```
+# Reset password
+node reset-password.js
 
-Akses aplikasi melalui browser:
-```
-http://IP_SERVER:PORT
-```
-
-Contoh: `http://88.12.34.56:7575`
-
-
-## 🔐 Reset Password
-
-Jika lupa password atau perlu reset akun:
-
-```bash
-cd streamflow && node reset-password.js
-```
-
-## ⏰ Pengaturan Timezone Server
-
-Untuk memastikan scheduled streaming berjalan dengan waktu yang akurat:
-
-### Cek timezone saat ini:
-```bash
-timedatectl status
-```
-
-### Lihat daftar timezone tersedia:
-```bash
-timedatectl list-timezones | grep Asia
-```
-
-### Set timezone ke WIB (Jakarta):
-```bash
-sudo timedatectl set-timezone Asia/Jakarta
-```
-
-### Restart aplikasi setelah mengubah timezone:
-```bash
+# Update aplikasi
+git pull origin main
+npm install
 pm2 restart streamflow
 ```
-
-## 🐳 Docker Deployment
-
-### 1. Persiapan Environment
-
-Buat file `.env` di root project:
-```env
-PORT=7575
-SESSION_SECRET=your_random_secret_here
-NODE_ENV=development
-```
-
-### 2. Build dan Jalankan
-
-```bash
-docker-compose up --build
-```
-
-Akses aplikasi: [http://localhost:7575](http://localhost:7575)
-
-### 3. Data Persistence
-
-Data akan tersimpan secara otomatis di:
-- Database: `db/`
-- Logs: `logs/`
-- Upload files: `public/uploads/`
-
-### 4. Reset Password (Docker)
-
-```bash
-docker-compose exec app node reset-password.js
-```
-
-## 🔫 Troubleshooting
-
-### Permission Error
-```bash
-chmod -R 755 public/uploads/
-```
-
-### Port Already in Use
-```bash
-# Cek proses yang menggunakan port
-sudo lsof -i :7575
-
-# Kill proses jika diperlukan
-sudo kill -9 <PID>
-```
-
-### Database Error
-```bash
-# Reset database (PERINGATAN: akan menghapus semua data)
-rm db/*.db
-
-# Restart aplikasi untuk membuat database baru
-pm2 restart streamflow
-```
-
-### Docker Troubleshooting
-
-**Tidak bisa login:**
-- Pastikan `NODE_ENV=development` untuk akses HTTP
-- Periksa permission folder:
-  ```bash
-  sudo chmod -R 777 db/ logs/ public/uploads/
-  ```
-- Pastikan `SESSION_SECRET` tidak berubah
-
-**Production (HTTPS):**
-- Set `NODE_ENV=production`
-- Akses melalui HTTPS untuk cookie session
-
-## 💫 Contributors
-
-[![Contributors](https://contrib.rocks/image?repo=bangtutorial/streamflow)](https://github.com/bangtutorial/streamflow/graphs/contributors)
-
-## 📄 License
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/bangtutorial/streamflow/blob/main/LICENSE)
 
 ---
-© 2025 - [Bang Tutorial](https://youtube.com/bangtutorial) | Modified by Mas Ozang
 
+## 📞 Support
+
+- **Repository**: https://github.com/meteoradja-ytmjk/streamflowozang
+- **Issues**: https://github.com/meteoradja-ytmjk/streamflowozang/issues
+- **Original**: [@bangtutorial](https://youtube.com/@bangtutorial)
+
+---
+
+## ✅ Checklist Instalasi
+
+- [ ] VPS sudah siap (Ubuntu/Debian)
+- [ ] Akses SSH tersedia
+- [ ] Port 7575 available
+- [ ] Minimal 1GB RAM
+- [ ] Jalankan instalasi (otomatis/manual)
+- [ ] Generate secret key
+- [ ] Setup firewall
+- [ ] Start dengan PM2
+- [ ] Akses di browser
+- [ ] Buat akun admin
+- [ ] Test upload video
+- [ ] Test create stream
+
+---
+
+**Selamat menggunakan StreamFlow!** 🎉
+
+Modified by Mas Ozang | Original by Bang Tutorial
