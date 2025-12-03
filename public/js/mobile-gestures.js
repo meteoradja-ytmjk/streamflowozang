@@ -250,7 +250,7 @@ class MobileGestures {
   setupPullToRefresh() {
     let startY = 0;
     let pulling = false;
-    const threshold = 80;
+    const threshold = 120; // Increased threshold to make it less sensitive
 
     // Create pull to refresh indicator
     const indicator = document.createElement('div');
@@ -324,22 +324,58 @@ class MobileGestures {
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
+        
+        /* Disable pull-to-refresh in modals and forms */
+        .modal-overlay,
+        .modal-container,
+        form,
+        input,
+        textarea,
+        select {
+          overscroll-behavior-y: contain;
+        }
       `;
       document.head.appendChild(style);
     }
 
+    // Helper function to check if touch is on interactive element
+    const isInteractiveElement = (target) => {
+      const interactiveTags = ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'];
+      const isInteractive = interactiveTags.includes(target.tagName);
+      const isInModal = target.closest('.modal-overlay, .modal-container, form');
+      const isInDropdown = target.closest('[id*="Dropdown"], [id*="dropdown"]');
+      return isInteractive || isInModal || isInDropdown;
+    };
+
     document.addEventListener('touchstart', (e) => {
+      // Don't enable pull-to-refresh if touching interactive elements
+      if (isInteractiveElement(e.target)) {
+        startY = null;
+        return;
+      }
+      
       if (window.scrollY === 0) {
         startY = e.touches[0].clientY;
       }
     }, { passive: true });
 
     document.addEventListener('touchmove', (e) => {
+      // Skip if startY is null (touching interactive element)
+      if (startY === null) return;
+      
+      // Don't trigger if user is interacting with form elements
+      if (isInteractiveElement(e.target)) {
+        pulling = false;
+        indicator.classList.remove('pulling');
+        return;
+      }
+      
       if (window.scrollY === 0) {
         const currentY = e.touches[0].clientY;
         const deltaY = currentY - startY;
 
-        if (deltaY > 0 && deltaY < threshold * 2) {
+        // Increased threshold and added more strict conditions
+        if (deltaY > 30 && deltaY < threshold * 2) {
           pulling = true;
           indicator.classList.add('pulling');
           
@@ -353,7 +389,7 @@ class MobileGestures {
     }, { passive: true });
 
     document.addEventListener('touchend', (e) => {
-      if (pulling) {
+      if (pulling && startY !== null) {
         const currentY = e.changedTouches[0].clientY;
         const deltaY = currentY - startY;
 
@@ -371,6 +407,9 @@ class MobileGestures {
 
         pulling = false;
       }
+      
+      // Reset startY
+      startY = null;
     }, { passive: true });
   }
 
@@ -415,3 +454,27 @@ if (document.readyState === 'loading') {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = MobileGestures;
 }
+
+
+// Add form interaction tracking
+document.addEventListener('DOMContentLoaded', () => {
+  // Track when user focuses on form inputs
+  document.addEventListener('focusin', (e) => {
+    if (e.target.matches('input, textarea, select')) {
+      document.body.classList.add('form-active');
+    }
+  });
+
+  // Remove form-active class when user leaves form
+  document.addEventListener('focusout', (e) => {
+    if (e.target.matches('input, textarea, select')) {
+      // Delay to check if focus moved to another form element
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (!activeElement.matches('input, textarea, select')) {
+          document.body.classList.remove('form-active');
+        }
+      }, 100);
+    }
+  });
+});

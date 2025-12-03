@@ -150,6 +150,12 @@ function createTables() {
     }
   });
 
+  db.run(`ALTER TABLE users ADD COLUMN max_streams INTEGER DEFAULT -1`, (err) => {
+    if (err && !err.message.includes('duplicate column name')) {
+      console.error('Error adding max_streams column:', err.message);
+    }
+  });
+
   db.run(`ALTER TABLE streams ADD COLUMN audio_id TEXT`, (err) => {
     if (err && !err.message.includes('duplicate column name')) {
       console.error('Error adding audio_id column:', err.message);

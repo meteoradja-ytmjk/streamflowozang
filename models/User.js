@@ -39,15 +39,15 @@ class User {
       const userId = uuidv4();
       return new Promise((resolve, reject) => {
         db.run(
-          'INSERT INTO users (id, username, password, avatar_path, user_role, status) VALUES (?, ?, ?, ?, ?, ?)',
-          [userId, userData.username, hashedPassword, userData.avatar_path || null, userData.user_role || 'admin', userData.status || 'active'],
+          'INSERT INTO users (id, username, password, avatar_path, user_role, status, max_streams) VALUES (?, ?, ?, ?, ?, ?, ?)',
+          [userId, userData.username, hashedPassword, userData.avatar_path || null, userData.user_role || 'admin', userData.status || 'active', userData.max_streams !== undefined ? userData.max_streams : -1],
           function (err) {
             if (err) {
               console.error("DB error during user creation:", err);
               return reject(err);
             }
             console.log("User created successfully with ID:", userId);
-            resolve({ id: userId, username: userData.username, user_role: userData.user_role || 'admin', status: userData.status || 'active' });
+            resolve({ id: userId, username: userData.username, user_role: userData.user_role || 'admin', status: userData.status || 'active', max_streams: userData.max_streams !== undefined ? userData.max_streams : -1 });
           }
         );
       });
@@ -195,6 +195,11 @@ class User {
       if (updateData.password) {
         fields.push('password = ?');
         values.push(updateData.password);
+      }
+      
+      if (updateData.max_streams !== undefined) {
+        fields.push('max_streams = ?');
+        values.push(updateData.max_streams);
       }
       
       if (fields.length === 0) {

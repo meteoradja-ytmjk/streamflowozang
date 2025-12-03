@@ -861,7 +861,7 @@ app.post('/api/users/delete', isAdmin, async (req, res) => {
 
 app.post('/api/users/update', isAdmin, upload.single('avatar'), async (req, res) => {
   try {
-    const { userId, username, role, status, password } = req.body;
+    const { userId, username, role, status, password, maxStreams } = req.body;
     
     if (!userId) {
       return res.status(400).json({
@@ -895,6 +895,10 @@ app.post('/api/users/update', isAdmin, upload.single('avatar'), async (req, res)
       updateData.password = await bcrypt.hash(password, 10);
     }
 
+    if (maxStreams !== undefined) {
+      updateData.max_streams = parseInt(maxStreams);
+    }
+
     await User.updateProfile(userId, updateData);
     
     res.json({
@@ -912,7 +916,7 @@ app.post('/api/users/update', isAdmin, upload.single('avatar'), async (req, res)
 
 app.post('/api/users/create', isAdmin, upload.single('avatar'), async (req, res) => {
   try {
-    const { username, role, status, password } = req.body;
+    const { username, role, status, password, maxStreams } = req.body;
     
     if (!username || !password) {
       return res.status(400).json({
@@ -939,7 +943,8 @@ app.post('/api/users/create', isAdmin, upload.single('avatar'), async (req, res)
       password: password,
       user_role: role || 'user',
       status: status || 'active',
-      avatar_path: avatarPath
+      avatar_path: avatarPath,
+      max_streams: maxStreams !== undefined ? parseInt(maxStreams) : -1
     };
 
     const result = await User.create(userData);
@@ -1922,6 +1927,19 @@ app.post('/api/streams', isAuthenticated, [
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ success: false, error: errors.array()[0].msg });
+    }
+
+    // Check stream limit
+    const user = await User.findById(req.session.userId);
+    if (user && user.max_streams !== -1) {
+      const Stream = require('./models/Stream');
+      const userStreams = await Stream.findAll(req.session.userId);
+      if (userStreams.length >= user.max_streams) {
+        return res.status(403).json({ 
+          success: false, 
+          error: `You have reached the maximum limit of ${user.max_streams} stream(s). Please delete an existing stream to create a new one.` 
+        });
+      }
     }
     let platform = 'Custom';
     let platform_icon = 'ti-broadcast';

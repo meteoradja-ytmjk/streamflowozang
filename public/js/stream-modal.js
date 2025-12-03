@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function openNewStreamModal() {
   const modal = document.getElementById('newStreamModal');
   document.body.style.overflow = 'hidden';
+  document.body.classList.add('modal-open');
   modal.classList.remove('hidden');
   const advancedSettingsContent = document.getElementById('advancedSettingsContent');
   const advancedSettingsToggle = document.getElementById('advancedSettingsToggle');
@@ -50,6 +51,7 @@ function openNewStreamModal() {
 function closeNewStreamModal() {
   const modal = document.getElementById('newStreamModal');
   document.body.style.overflow = 'auto';
+  document.body.classList.remove('modal-open', 'form-active');
   modal.classList.remove('active');
   resetModalForm();
   const advancedSettingsContent = document.getElementById('advancedSettingsContent');

@@ -185,3 +185,76 @@ body {
     font-size: 16px;
   }
 }
+/* Mobile 
+Touch & Gesture Optimizations */
+@media (max-width: 1023px) {
+  /* Prevent pull-to-refresh on modals and forms */
+  .modal-overlay,
+  .modal-container,
+  form,
+  .modal-overlay form,
+  #newStreamModal,
+  #newStreamModal *,
+  [id*="Modal"],
+  [id*="modal"] {
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent accidental pull-to-refresh while scrolling in dropdowns */
+  [id*="Dropdown"],
+  [id*="dropdown"],
+  .dropdown-menu,
+  select {
+    overscroll-behavior-y: contain;
+  }
+  
+  /* Improve touch targets for mobile */
+  input,
+  textarea,
+  select,
+  button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Prevent zoom on input focus */
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="datetime-local"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+  
+  /* Disable pull-to-refresh globally on mobile when in forms */
+  body.form-active {
+    overscroll-behavior-y: contain;
+  }
+  
+  /* Better scrolling for modal content */
+  .modal-container > div {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  overscroll-behavior-y: contain;
+}
+
+/* Improve touch feedback */
+@media (hover: none) and (pointer: coarse) {
+  button:active,
+  a:active,
+  [onclick]:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+    transition: all 0.1s ease;
+  }
+}
