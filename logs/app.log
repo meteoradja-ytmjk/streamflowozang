@@ -11413,3 +11413,47 @@ rtmps://a.rtmp.youtube.com/live2/ugcgucih: I/O error
 2025-12-03T17:25:06.871Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
 2025-12-03T17:25:06.872Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
 2025-12-03T17:25:06.872Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T22:44:26.536Z [LOG] Logger initialized. Output will be written to console and logs/app.log
+2025-12-03T22:44:27.251Z [LOG] Using bundled FFmpeg at: D:\streamflow-main\node_modules\@ffmpeg-installer\win32-x64\ffmpeg.exe
+2025-12-03T22:44:27.257Z [LOG] [RecurringScheduler] Initializing...
+2025-12-03T22:44:27.311Z [LOG] StreamFlow running at:
+2025-12-03T22:44:27.312Z [LOG]   http://192.168.1.2:7575
+2025-12-03T22:44:27.317Z [LOG] [RecurringScheduler] Found 0 active templates
+2025-12-03T22:44:27.318Z [LOG] [RecurringScheduler] Initialization complete
+2025-12-03T22:44:27.318Z [LOG] Stream scheduler initialized
+2025-12-03T22:44:27.320Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T22:44:27.352Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T22:45:01.382Z [LOG] User created successfully with ID: 12107e91-6625-4ce2-9d8e-c71efbd3aa5e
+2025-12-03T22:45:01.382Z [LOG] Setup account - Using user ID from database: 12107e91-6625-4ce2-9d8e-c71efbd3aa5e
+2025-12-03T22:45:01.383Z [LOG] Setup account - Session userId set to: 12107e91-6625-4ce2-9d8e-c71efbd3aa5e
+2025-12-03T22:47:21.474Z [LOG] User created successfully with ID: 4cbbf818-43a1-4394-8bcd-e12aa0627bae
+2025-12-03T22:49:27.263Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T22:49:27.265Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T22:54:27.271Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T22:54:27.272Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T22:59:27.280Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T22:59:27.281Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:04:27.295Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:04:27.297Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:08:18.034Z [LOG] Logger initialized. Output will be written to console and logs/app.log
+2025-12-03T23:08:18.440Z [LOG] Using bundled FFmpeg at: D:\streamflow-main\node_modules\@ffmpeg-installer\win32-x64\ffmpeg.exe
+2025-12-03T23:08:18.443Z [LOG] [RecurringScheduler] Initializing...
+2025-12-03T23:08:18.469Z [LOG] StreamFlow running at:
+2025-12-03T23:08:18.470Z [LOG]   http://192.168.1.2:7575
+2025-12-03T23:08:18.472Z [LOG] Stream scheduler initialized
+2025-12-03T23:08:18.473Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:08:18.473Z [LOG] [RecurringScheduler] Found 0 active templates
+2025-12-03T23:08:18.474Z [LOG] [RecurringScheduler] Initialization complete
+2025-12-03T23:08:18.474Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:13:18.449Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:13:18.450Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:18:18.457Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:18:18.458Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:23:18.457Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:23:18.457Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:28:18.465Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:28:18.466Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:33:18.480Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:33:18.481Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:38:18.492Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:38:18.493Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
