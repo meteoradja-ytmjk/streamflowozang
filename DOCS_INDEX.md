@@ -60,24 +60,34 @@ Panduan lengkap untuk StreamFlow - Live Streaming Application
    - Session problems
    - Authentication fixes
 
+### Troubleshooting
+10. **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** ⭐⭐ - Complete troubleshooting guide
+    - Setup & installation issues
+    - Admin & authentication problems
+    - Database issues
+    - Streaming problems
+    - Performance issues
+    - Git & GitHub issues
+    - Server & deployment issues
+
 ---
 
 ## 🔧 Development & Git
 
 ### Git & GitHub
-10. **[GIT_GUIDE.md](GIT_GUIDE.md)** - Git & GitHub guide
+11. **[GIT_GUIDE.md](GIT_GUIDE.md)** - Git & GitHub guide
     - Push/pull commands
     - Branch management
     - Troubleshooting
     - Best practices
 
 ### Updates
-11. **[CHANGELOG.md](CHANGELOG.md)** - Version history
+12. **[CHANGELOG.md](CHANGELOG.md)** - Version history
     - All changes by version
     - New features
     - Bug fixes
 
-12. **[UPDATE_SUMMARY.md](UPDATE_SUMMARY.md)** - Latest update summary
+13. **[UPDATE_SUMMARY.md](UPDATE_SUMMARY.md)** - Latest update summary
     - Recent changes
     - New files
     - Improvements
@@ -137,16 +147,19 @@ node quick-login-fix.js        # Fix login issues
 - [RESET_ADMIN_GUIDE.md](RESET_ADMIN_GUIDE.md) - Password reset
 - [SIGNUP_FIX_GUIDE.md](SIGNUP_FIX_GUIDE.md) - Signup fixes
 - [LOGIN_FIX_GUIDE.md](LOGIN_FIX_GUIDE.md) - Login fixes
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Complete troubleshooting
 
 #### Untuk Developer
 - [GIT_GUIDE.md](GIT_GUIDE.md) - Git workflow
 - [CHANGELOG.md](CHANGELOG.md) - Version history
 - [UPDATE_SUMMARY.md](UPDATE_SUMMARY.md) - Latest updates
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Technical issues
 
 #### Untuk DevOps
 - [INSTALASI_VPS.md](INSTALASI_VPS.md) - VPS installation
 - [DEPLOYMENT.md](DEPLOYMENT.md) - Deployment guide
 - [DEPLOYMENT_CHECKLIST.md](DEPLOYMENT_CHECKLIST.md) - Checklist
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Server issues
 
 ### 🔍 By Topic
 
@@ -161,6 +174,7 @@ node quick-login-fix.js        # Fix login issues
 - [RESET_ADMIN_GUIDE.md](RESET_ADMIN_GUIDE.md) - Password reset
 
 #### Troubleshooting
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) - Complete guide ⭐
 - [ADMIN_GUIDE.md](ADMIN_GUIDE.md) - Admin issues
 - [SIGNUP_FIX_GUIDE.md](SIGNUP_FIX_GUIDE.md) - Signup errors
 - [LOGIN_FIX_GUIDE.md](LOGIN_FIX_GUIDE.md) - Login problems
@@ -212,9 +226,9 @@ node quick-login-fix.js        # Fix login issues
 ## 📊 Documentation Stats
 
 ```
-Total Documents: 15+
+Total Documents: 16+
 Total Scripts: 16+
-Categories: 4 (Getting Started, Admin, Development, Deployment)
+Categories: 5 (Getting Started, Admin, Troubleshooting, Development, Deployment)
 Languages: English & Indonesian
 ```
 
