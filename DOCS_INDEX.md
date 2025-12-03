@@ -94,18 +94,34 @@ Panduan lengkap untuk StreamFlow - Live Streaming Application
 
 ---
 
-## 📦 Utility Scripts
+## 📦 Utility Scripts & Tools
+
+### 🎯 Interactive Tools (NEW!)
+```bash
+# Interactive CLI - All-in-one management tool
+npm run cli
+node streamflow-cli.js
+
+# Setup Wizard - First-time setup
+npm run setup
+node setup-wizard.js
+
+# Backup Manager - Backup and restore
+npm run backup              # Create backup
+npm run backup:list         # List backups
+node backup-manager.js restore <name>  # Restore backup
+```
 
 ### Admin Tools
 ```bash
 # Setup & Reset
-node reset-database-fresh.js   # Reset database (hapus semua user)
+npm run admin:reset            # Reset admin password
+npm run db:reset               # Reset database (hapus semua user)
 node fix-setup-account.js      # Diagnose setup account issues
 node delete-all-users.js       # Delete all users with confirmation
-node quick-reset-admin.js      # Reset admin password
 
 # User Management
-node activate-all-users.js     # Activate all inactive users
+npm run admin:activate         # Activate all inactive users
 node create-admin.js           # Create new admin
 ```
 

@@ -1,5 +1,63 @@
 # Changelog - StreamFlow
 
+## [2.4.0] - 2024-12-04
+
+### 🚀 Interactive Management Tools
+- **Added streamflow-cli.js** ⭐⭐⭐ - Interactive CLI for all management tasks
+  - Admin management (reset password, activate users)
+  - Database operations (check, reset)
+  - Application control (start, stop, restart, logs)
+  - Git operations (push, pull, status)
+  - Documentation access
+  - Color-coded terminal output
+  - Easy-to-use menu system
+
+- **Added setup-wizard.js** ⭐⭐ - First-time setup wizard
+  - Prerequisites check (Node.js, npm, FFmpeg, Git, PM2)
+  - Automated dependency installation
+  - Environment configuration
+  - Database initialization
+  - PM2 setup
+  - Application startup
+  - Step-by-step guidance
+
+- **Added backup-manager.js** ⭐⭐ - Automated backup and restore
+  - Create full backups (database, .env, uploads)
+  - List all backups with details
+  - Restore from backup
+  - Delete old backups
+  - Automatic backup info tracking
+  - Size calculation and reporting
+
+### 📦 NPM Scripts Enhancement
+- Added 15+ new npm scripts for common tasks:
+  ```bash
+  npm run cli              # Interactive CLI
+  npm run setup            # Setup wizard
+  npm run backup           # Create backup
+  npm run backup:list      # List backups
+  npm run admin:reset      # Reset admin password
+  npm run admin:activate   # Activate all users
+  npm run db:reset         # Reset database
+  npm run db:check         # Check database
+  npm run fix:setup        # Fix setup issues
+  npm run fix:signup       # Fix signup issues
+  ```
+
+### 🎨 User Experience
+- Interactive menus for easier management
+- Color-coded terminal output for better readability
+- Step-by-step wizards for complex tasks
+- Automated checks and validations
+- Clear error messages and solutions
+
+### 📝 Documentation
+- Updated README.md with management tools section
+- Updated package.json to v2.3.0
+- Added comprehensive tool documentation
+
+---
+
 ## [2.3.0] - 2024-12-04
 
 ### 📚 Documentation Overhaul
