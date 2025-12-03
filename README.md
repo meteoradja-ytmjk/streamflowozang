@@ -87,11 +87,12 @@ cd streamflowozang
 # Install dependencies
 npm install
 
-# Generate secret key (WAJIB!)
-node generate-secret.js
+# Run setup wizard (Interactive)
+npm run setup
 
-# Health check
-node health-check.js
+# Or manual setup:
+node generate-secret.js  # Generate secret key
+node health-check.js     # Health check
 ```
 
 ### 3. Setup Firewall
@@ -157,31 +158,54 @@ Buka browser: `http://YOUR_SERVER_IP:7575`
 
 ---
 
-## 🔧 Perintah Penting
+## 🔧 Management Tools
+
+### Interactive CLI (Recommended)
+```bash
+npm run cli
+# or
+node streamflow-cli.js
+```
+
+**Features:**
+- Reset admin password
+- Database management
+- User activation
+- System diagnostics
+- Application control
+- Git operations
+- And more...
+
+### Quick Commands
 
 ```bash
-# Check status aplikasi
-pm2 status
+# Setup & Installation
+npm run setup              # Interactive setup wizard
+npm run health-check       # System health check
 
-# Restart aplikasi
-pm2 restart streamflow
+# Admin Management
+npm run admin:reset        # Reset admin password
+npm run admin:activate     # Activate all users
 
-# Lihat logs
-pm2 logs streamflow
+# Database
+npm run db:check           # Check database
+npm run db:reset           # Reset database (delete all users)
 
-# Monitor resources
-pm2 monit
+# Backup & Restore
+npm run backup             # Create backup
+npm run backup:list        # List backups
+npm run backup:restore     # Restore backup
 
-# Reset password user
-node reset-password.js
+# Diagnostics
+npm run fix:setup          # Fix setup account issues
+npm run fix:signup         # Fix signup issues
 
-# Update aplikasi
-git pull origin main
-npm install
-pm2 restart streamflow
-
-# Health check
-node health-check.js
+# PM2 Management
+npm run pm2:start          # Start with PM2
+npm run pm2:stop           # Stop application
+npm run pm2:restart        # Restart application
+npm run pm2:logs           # View logs
+npm run pm2:status         # Check status
 ```
 
 ---
