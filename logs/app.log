@@ -10657,3 +10657,759 @@ rtmps://a.rtmp.youtube.com/live2/ugcgucih: I/O error
 2025-12-03T01:40:05.414Z [LOG] [StreamingService] Stream status sync completed. Active streams: 1
 2025-12-03T01:40:05.414Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
 2025-12-03T01:40:05.415Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T01:45:05.424Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T01:45:05.428Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T01:45:05.429Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T01:45:05.429Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T01:50:05.436Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T01:50:05.437Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T01:50:05.438Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T01:50:05.438Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T01:55:05.436Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T01:55:05.437Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T01:55:05.438Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T01:55:05.438Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:00:05.441Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:00:05.442Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:00:05.443Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:00:05.443Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:05:05.455Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:05:05.456Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:05:05.457Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:05:05.457Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:10:05.457Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:10:05.458Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:10:05.459Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:10:05.459Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:15:05.464Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:15:05.465Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:15:05.466Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:15:05.466Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:20:05.474Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:20:05.475Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:20:05.475Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:20:05.475Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:25:05.488Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:25:05.489Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:25:05.490Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:25:05.490Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:30:05.494Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:30:05.495Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:30:05.496Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:30:05.496Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:35:05.503Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:35:05.505Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:35:05.505Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:35:05.506Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:40:05.511Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:40:05.512Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:40:05.513Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:40:05.513Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:45:05.517Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:45:05.521Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:45:05.522Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:45:05.522Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:50:05.530Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:50:05.531Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:50:05.532Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:50:05.532Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T02:55:05.538Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T02:55:05.539Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T02:55:05.540Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T02:55:05.540Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:00:05.546Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:00:05.547Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:00:05.548Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:00:05.548Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:05:05.547Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:05:05.548Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:05:05.548Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:05:05.549Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:10:05.563Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:10:05.564Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:10:05.564Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:10:05.564Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:15:05.571Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:15:05.573Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:15:05.573Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:15:05.573Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:20:05.580Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:20:05.581Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:20:05.581Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:20:05.582Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:25:05.590Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:25:05.591Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:25:05.592Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:25:05.592Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:30:05.600Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:30:05.601Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:30:05.602Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:30:05.602Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:35:05.608Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:35:05.609Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:35:05.609Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:35:05.610Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:40:05.622Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:40:05.623Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:40:05.623Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:40:05.623Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:45:05.626Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:45:05.629Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:45:05.630Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:45:05.631Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:50:05.634Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:50:05.635Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:50:05.636Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:50:05.670Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T03:55:05.634Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T03:55:05.635Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T03:55:05.636Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T03:55:05.636Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:00:05.637Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:00:05.638Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:00:05.639Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:00:05.639Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:05:05.639Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:05:05.640Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:05:05.641Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:05:05.641Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:10:05.646Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:10:05.647Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:10:05.648Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:10:05.648Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:15:05.652Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:15:05.653Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:15:05.655Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:15:05.656Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:20:05.667Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:20:05.668Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:20:05.669Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:20:05.669Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:25:05.671Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:25:05.672Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:25:05.672Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:25:05.672Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:30:05.686Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:30:05.687Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:30:05.688Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:30:05.688Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:35:05.692Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:35:05.693Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:35:05.694Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:35:05.694Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:40:05.693Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:40:05.694Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:40:05.694Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:40:05.694Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:45:05.697Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:45:05.698Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:45:05.700Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:45:05.700Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:50:05.700Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:50:05.701Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:50:05.701Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:50:05.702Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T04:55:05.712Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T04:55:05.713Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T04:55:05.714Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T04:55:05.714Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:00:05.714Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:00:05.715Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:00:05.716Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:00:05.716Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:05:05.727Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:05:05.729Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:05:05.729Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:05:05.729Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:10:05.736Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:10:05.737Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:10:05.737Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:10:05.738Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:15:05.737Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:15:05.738Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:15:05.739Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:15:05.739Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:20:05.742Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:20:05.743Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:20:05.744Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:20:05.744Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:25:05.756Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:25:05.757Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:25:05.758Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:25:05.758Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:30:05.766Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:30:05.767Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:30:05.768Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:30:05.768Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:35:05.776Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:35:05.777Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:35:05.777Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:35:05.778Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:40:05.781Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:40:05.782Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:40:05.783Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:40:05.783Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:45:05.787Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:45:05.788Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:45:05.790Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:45:05.791Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:50:05.801Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:50:05.802Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:50:05.802Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:50:05.802Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T05:55:05.804Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T05:55:05.806Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T05:55:05.806Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T05:55:05.807Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:00:05.805Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:00:05.806Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:00:05.807Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:00:05.807Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:05:05.814Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:05:05.815Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:05:05.815Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:05:05.816Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:10:05.823Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:10:05.824Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:10:05.825Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:10:05.825Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:15:05.823Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:15:05.824Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:15:05.825Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:15:05.826Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:20:05.827Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:20:05.828Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:20:05.829Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:20:05.829Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:25:05.828Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:25:05.828Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:25:05.829Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:25:05.829Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:30:05.837Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:30:05.838Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:30:05.838Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:30:05.838Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:35:05.847Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:35:05.848Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:35:05.849Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:35:05.849Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:40:05.857Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:40:05.858Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:40:05.859Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:40:05.859Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:45:05.862Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:45:05.864Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:45:05.865Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:45:05.865Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:50:05.862Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:50:05.863Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:50:05.863Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:50:05.864Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T06:55:05.875Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T06:55:05.876Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T06:55:05.877Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T06:55:05.877Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:00:05.879Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:00:05.881Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:00:05.882Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:00:05.883Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:05:05.886Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:05:05.887Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:05:05.888Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:05:05.888Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:10:05.894Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:10:05.895Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:10:05.896Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:10:05.896Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:15:05.899Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:15:05.900Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:15:05.902Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:15:05.902Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:20:05.910Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:20:05.911Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:20:05.912Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:20:05.912Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:25:05.912Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:25:05.913Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:25:05.914Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:25:05.914Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:30:05.926Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:30:05.928Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:30:05.929Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:30:05.929Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:35:05.934Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:35:05.935Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:35:05.936Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:35:05.936Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:40:05.938Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:40:05.939Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:40:05.940Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:40:05.940Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:45:05.941Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:45:05.942Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:45:05.984Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:45:05.985Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:50:05.952Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:50:05.953Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:50:05.953Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:50:05.953Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T07:55:05.964Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T07:55:05.965Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T07:55:05.966Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T07:55:05.966Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:00:05.967Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:00:05.968Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:00:05.969Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:00:05.969Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:05:05.970Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:05:05.971Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:05:05.972Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:05:05.972Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:10:05.983Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:10:05.984Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:10:05.985Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:10:05.985Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:15:05.985Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:15:05.986Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:15:05.987Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:15:05.987Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:20:05.996Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:20:05.997Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:20:05.997Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:20:05.998Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:25:06.007Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:25:06.008Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:25:06.008Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:25:06.009Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:30:06.017Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:30:06.018Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:30:06.019Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:30:06.019Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:35:06.064Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:35:06.064Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:35:06.065Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:35:06.065Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:40:06.074Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:40:06.075Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:40:06.075Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:40:06.075Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:45:06.076Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:45:06.077Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:45:06.078Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:45:06.078Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:50:06.087Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:50:06.089Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:50:06.089Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:50:06.090Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T08:55:06.087Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T08:55:06.088Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T08:55:06.089Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T08:55:06.089Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:00:06.097Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:00:06.098Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:00:06.099Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:00:06.099Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:05:06.097Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:05:06.098Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:05:06.098Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:05:06.099Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:10:06.107Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:10:06.108Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:10:06.109Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:10:06.109Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:15:06.109Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:15:06.110Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:15:06.110Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:15:06.111Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:20:06.110Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:20:06.111Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:20:06.111Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:20:06.111Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:25:06.119Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:25:06.120Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:25:06.121Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:25:06.121Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:30:06.130Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:30:06.131Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:30:06.131Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:30:06.132Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:35:06.132Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:35:06.133Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:35:06.134Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:35:06.134Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:40:06.143Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:40:06.144Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:40:06.145Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:40:06.145Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:45:06.158Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:45:06.159Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:45:06.159Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:45:06.160Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:50:06.162Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:50:06.163Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:50:06.164Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:50:06.164Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T09:55:06.165Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T09:55:06.166Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T09:55:06.167Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T09:55:06.167Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:00:06.176Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:00:06.177Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:00:06.178Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:00:06.178Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:05:06.178Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:05:06.179Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:05:06.180Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:05:06.180Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:10:06.193Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:10:06.194Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:10:06.194Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:10:06.195Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:15:06.199Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:15:06.201Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:15:06.202Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:15:06.202Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:20:06.212Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:20:06.214Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:20:06.214Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:20:06.215Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:25:06.223Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:25:06.224Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:25:06.224Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:25:06.225Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:30:06.227Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:30:06.228Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:30:06.228Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:30:06.229Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:35:06.231Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:35:06.232Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:35:06.233Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:35:06.233Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:40:06.246Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:40:06.247Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:40:06.248Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:40:06.248Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:45:06.251Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:45:06.252Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:45:06.253Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:45:06.253Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:50:06.255Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:50:06.256Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:50:06.257Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:50:06.257Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T10:55:06.264Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T10:55:06.265Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T10:55:06.266Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T10:55:06.266Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:00:06.265Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:00:06.266Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:00:06.268Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:00:06.268Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:05:06.279Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:05:06.280Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:05:06.281Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:05:06.281Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:10:06.282Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:10:06.283Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:10:06.284Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:10:06.284Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:15:06.291Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:15:06.292Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:15:06.292Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:15:06.292Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:20:06.295Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:20:06.296Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:20:06.297Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:20:06.297Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:25:06.300Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:25:06.302Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:25:06.302Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:25:06.303Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:30:06.308Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:30:06.309Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:30:06.310Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:30:06.310Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:35:06.323Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:35:06.324Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:35:06.324Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:35:06.325Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:40:06.337Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:40:06.338Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:40:06.338Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:40:06.339Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:45:06.348Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:45:06.349Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:45:06.350Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:45:06.350Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:50:06.358Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:50:06.359Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:50:06.360Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:50:06.360Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T11:55:06.364Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T11:55:06.365Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T11:55:06.365Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T11:55:06.366Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:00:06.378Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:00:06.379Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:00:06.380Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:00:06.380Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:05:06.393Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:05:06.394Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:05:06.394Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:05:06.395Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:10:06.405Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:10:06.406Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:10:06.407Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:10:06.407Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:15:06.412Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:15:06.413Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:15:06.414Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:15:06.414Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:20:06.423Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:20:06.424Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:20:06.427Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:20:06.427Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:25:06.435Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:25:06.436Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:25:06.437Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:25:06.437Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:30:06.441Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:30:06.442Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:30:06.443Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:30:06.443Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:35:06.443Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:35:06.444Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:35:06.445Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:35:06.445Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:40:06.454Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:40:06.455Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:40:06.456Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:40:06.456Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:45:06.467Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:45:06.468Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:45:06.468Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:45:06.469Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:50:06.476Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:50:06.477Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:50:06.477Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:50:06.478Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T12:55:06.481Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T12:55:06.482Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T12:55:06.483Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T12:55:06.483Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:00:06.484Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:00:06.485Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:00:06.486Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:00:06.486Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:05:06.486Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:05:06.487Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:05:06.487Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:05:06.488Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:10:06.488Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:10:06.489Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:10:06.490Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:10:06.490Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:15:06.502Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:15:06.503Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:15:06.503Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:15:06.504Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:20:06.504Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:20:06.505Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:20:06.506Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:20:06.506Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:25:06.519Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:25:06.520Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:25:06.521Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:25:06.522Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:30:06.529Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:30:06.551Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:30:06.551Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:30:06.552Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:35:06.530Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:35:06.531Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:35:06.531Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:35:06.531Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:40:06.531Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:40:06.532Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:40:06.533Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:40:06.533Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:45:06.542Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:45:06.543Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:45:06.544Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:45:06.544Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:50:06.556Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:50:06.557Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:50:06.557Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:50:06.558Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T13:55:06.565Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T13:55:06.566Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T13:55:06.566Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T13:55:06.566Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:00:06.574Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:00:06.575Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:00:06.576Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:00:06.576Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:05:06.574Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:05:06.575Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:05:06.576Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:05:06.576Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:10:06.581Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:10:06.582Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:10:06.582Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:10:06.583Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:15:06.594Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:15:06.595Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:15:06.596Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:15:06.596Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:20:06.610Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:20:06.611Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:20:06.611Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:20:06.611Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:25:06.615Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:25:06.616Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:25:06.616Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:25:06.617Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:30:06.627Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:30:06.628Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:30:06.629Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:30:06.629Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:35:06.628Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:35:06.629Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:35:06.630Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:35:06.630Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:40:06.641Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:40:06.642Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:40:06.642Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:40:06.643Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:45:06.643Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:45:06.644Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:45:06.645Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:45:06.645Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:50:06.655Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:50:06.655Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:50:06.656Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:50:06.656Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T14:55:06.664Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T14:55:06.665Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T14:55:06.665Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T14:55:06.666Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:00:06.672Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:00:06.673Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:00:06.674Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:00:06.674Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:05:06.677Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:05:06.678Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:05:06.678Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:05:06.679Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:10:06.689Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:10:06.690Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:10:06.691Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:10:06.691Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:15:06.692Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:15:06.693Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:15:06.694Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:15:06.694Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:20:06.698Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:20:06.699Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:20:06.700Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:20:06.700Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:25:06.699Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:25:06.700Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:25:06.700Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:25:06.700Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:30:06.704Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:30:06.705Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:30:06.706Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:30:06.706Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:35:06.718Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:35:06.719Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:35:06.719Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:35:06.720Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:40:06.722Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:40:06.723Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:40:06.723Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:40:06.723Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:45:06.730Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:45:06.731Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:45:06.732Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:45:06.732Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:50:06.730Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:50:06.731Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:50:06.731Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:50:06.732Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T15:55:06.737Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T15:55:06.738Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T15:55:06.739Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T15:55:06.739Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:00:06.745Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:00:06.746Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:00:06.747Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:00:06.747Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:05:06.746Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:05:06.747Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:05:06.748Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:05:06.748Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:10:06.751Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:10:06.752Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:10:06.752Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:10:06.753Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:15:06.763Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:15:06.764Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:15:06.765Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:15:06.765Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:20:06.774Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:20:06.775Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:20:06.776Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:20:06.776Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:25:06.779Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:25:06.780Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:25:06.781Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:25:06.781Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:30:06.793Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:30:06.794Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:30:06.795Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:30:06.795Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:35:06.794Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:35:06.795Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:35:06.795Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:35:06.796Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:40:06.799Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:40:06.800Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:40:06.801Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:40:06.801Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:45:06.803Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:45:06.804Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:45:06.804Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:45:06.805Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:50:06.810Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:50:06.811Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:50:06.812Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:50:06.812Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T16:55:06.824Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T16:55:06.825Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T16:55:06.825Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T16:55:06.826Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T17:00:06.838Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T17:00:06.839Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T17:00:06.839Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T17:00:06.839Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T17:05:06.851Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T17:05:06.852Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T17:05:06.852Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T17:05:06.852Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T17:10:06.854Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T17:10:06.855Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T17:10:06.856Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T17:10:06.856Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T17:15:06.862Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T17:15:06.863Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T17:15:06.864Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T17:15:06.864Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T17:20:06.869Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T17:20:06.870Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T17:20:06.871Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T17:20:06.871Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T17:25:06.870Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T17:25:06.871Z [LOG] [StreamingService] Found inconsistent stream 42d09387-d850-4fd8-bf56-dcfbc79a268b: marked as 'live' in DB but not active in memory
+2025-12-03T17:25:06.872Z [LOG] [StreamingService] Updated stream 42d09387-d850-4fd8-bf56-dcfbc79a268b status to 'offline'
+2025-12-03T17:25:06.872Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0

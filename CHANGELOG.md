@@ -1,0 +1,112 @@
+# Changelog - StreamFlow
+
+## [2.1.1] - 2024-12-XX
+
+### 🐛 Bug Fixes
+- **Fixed signup error** - Resolved "An error occurred during registration" issue
+  - Added missing `max_streams` parameter in User.create()
+  - Improved error handling with specific error messages
+  - Added detailed logging for debugging
+
+### ✨ New Features
+- **Quick Admin Reset** - `quick-reset-admin.js` for instant admin password reset
+- **User Activation Tool** - `activate-all-users.js` to activate all inactive users
+- **Signup Diagnostics** - `fix-signup.js` to check and fix signup issues
+- **Signup Testing** - `test-signup.js` to verify signup functionality
+
+### 📚 Documentation
+- Added `SIGNUP_FIX_GUIDE.md` - Complete guide for fixing signup issues
+- Added `RESET_ADMIN_GUIDE.md` - Guide for resetting admin password
+- Added `DEPLOYMENT_CHECKLIST.md` - Deployment checklist
+- Added `READY_TO_DEPLOY.md` - Deployment readiness status
+- Added `QUICK_START.md` - Quick start guide
+
+### 🔧 Improvements
+- Better error messages for signup failures
+- Enhanced logging for troubleshooting
+- Improved database error handling
+- Added validation for user creation
+
+### 📦 New Scripts
+```bash
+node quick-reset-admin.js      # Reset admin password instantly
+node activate-all-users.js     # Activate all inactive users
+node fix-signup.js             # Diagnose and fix signup issues
+node test-signup.js            # Test signup functionality
+node health-check.js           # System health check
+```
+
+---
+
+## [2.1.0] - 2024-12-XX
+
+### 🚀 Production Ready
+- Complete deployment setup for VPS
+- Automated installation script (`install.sh`)
+- PM2 ecosystem configuration
+- Health check system
+- Pre/post deployment checks
+
+### 📚 Documentation
+- Complete deployment documentation
+- VPS installation guide (INSTALASI_VPS.md)
+- Deployment guide (DEPLOYMENT.md)
+- Quick start guide
+
+### 🔐 Security
+- Improved .gitignore
+- Secure .env.example template
+- Session secret generation
+- Database file protection
+
+### 🛠️ Infrastructure
+- PM2 production configuration
+- Automated startup scripts
+- Health monitoring
+- Error logging
+
+---
+
+## [2.0.0] - Original Release
+
+### Features
+- Multi-platform streaming (YouTube, Facebook, Twitch, etc.)
+- Video gallery management
+- Google Drive integration
+- Scheduled streaming
+- Recurring schedules
+- Advanced stream settings
+- Real-time monitoring
+- Audio overlay
+- Backup & recovery
+- Multi-user support
+- Responsive UI
+
+---
+
+## How to Update
+
+```bash
+# Pull latest changes
+git pull origin main
+
+# Install dependencies
+npm install
+
+# Run fixes if needed
+node fix-signup.js
+
+# Restart application
+pm2 restart streamflow
+```
+
+---
+
+## Support
+
+- **Repository**: https://github.com/meteoradja-ytmjk/streamflowozang
+- **Issues**: https://github.com/meteoradja-ytmjk/streamflowozang/issues
+
+---
+
+Modified by Mas Ozang | Original by Bang Tutorial

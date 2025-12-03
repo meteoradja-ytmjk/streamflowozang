@@ -396,7 +396,8 @@ app.post('/signup', upload.single('avatar'), async (req, res) => {
       password,
       avatar_path: avatarPath,
       user_role: user_role || 'member',
-      status: status || 'inactive'
+      status: status || 'inactive',
+      max_streams: -1  // -1 = unlimited streams for new users
     });
 
     if (newUser) {
@@ -414,9 +415,20 @@ app.post('/signup', upload.single('avatar'), async (req, res) => {
     }
   } catch (error) {
     console.error('Signup error:', error);
+    console.error('Error details:', error.message);
+    console.error('Error stack:', error.stack);
+    
+    // Provide more specific error message
+    let errorMessage = 'An error occurred during registration. Please try again.';
+    if (error.message && error.message.includes('UNIQUE constraint failed')) {
+      errorMessage = 'Username already exists. Please choose a different username.';
+    } else if (error.message) {
+      errorMessage = `Registration failed: ${error.message}`;
+    }
+    
     return res.render('signup', {
       title: 'Sign Up',
-      error: 'An error occurred during registration. Please try again.',
+      error: errorMessage,
       success: null
     });
   }
