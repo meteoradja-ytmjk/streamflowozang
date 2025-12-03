@@ -1,6 +1,36 @@
 # Changelog - StreamFlow
 
-## [2.1.1] - 2024-12-XX
+## [2.2.0] - 2024-12-04
+
+### 🔧 Admin Management
+- **Database Reset Tool** - `reset-database-fresh.js` for complete database reset
+- **Setup Account Diagnostics** - `fix-setup-account.js` to diagnose setup issues
+- **Delete All Users** - `delete-all-users.js` with confirmation prompt
+
+### 📚 Documentation
+- Added `ADMIN_GUIDE.md` - Comprehensive admin management guide
+  - Setup admin pertama kali
+  - Reset password admin
+  - Reset database
+  - Troubleshooting lengkap
+- Cleaned up duplicate documentation files
+- Consolidated all admin guides into one
+
+### 🐛 Bug Fixes
+- Fixed setup account blocking when users exist
+- Improved error messages for setup account
+- Better database cleanup on user deletion
+
+### 📦 New Scripts
+```bash
+node reset-database-fresh.js   # Reset database (hapus semua user)
+node fix-setup-account.js      # Diagnose setup account issues
+node delete-all-users.js       # Delete all users with confirmation
+```
+
+---
+
+## [2.1.1] - 2024-12-02
 
 ### 🐛 Bug Fixes
 - **Fixed signup error** - Resolved "An error occurred during registration" issue
@@ -27,7 +57,7 @@
 - Improved database error handling
 - Added validation for user creation
 
-### 📦 New Scripts
+### 📦 Scripts
 ```bash
 node quick-reset-admin.js      # Reset admin password instantly
 node activate-all-users.js     # Activate all inactive users
