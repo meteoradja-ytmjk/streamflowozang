@@ -1,0 +1,94 @@
+╔════════════════════════════════════════════════════════════════╗
+║                  STREAMFLOW - LOGIN SYSTEM                     ║
+║                     Quick Start Guide                          ║
+╚════════════════════════════════════════════════════════════════╝
+
+📋 FITUR BARU:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Sistem login dengan username & password
+✅ 2 Role: Admin & User
+✅ Admin bisa membatasi maksimal live streaming per user
+✅ Admin bisa manage semua user (create, edit, delete)
+✅ User bisa signup sendiri
+
+🚀 CARA CEPAT MEMULAI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPSI 1: Buat Demo Users (RECOMMENDED)
+────────────────────────────────────────
+1. Double-click: CREATE_DEMO_USERS.bat
+   ATAU jalankan: npm run users:create-demo
+
+2. Jalankan aplikasi: npm start
+
+3. Login dengan:
+   ┌─────────────────────────┐
+   │ ADMIN                   │
+   ├─────────────────────────┤
+   │ Username: admin         │
+   │ Password: admin123      │
+   │ Max Streams: Unlimited  │
+   └─────────────────────────┘
+
+   ┌─────────────────────────┐
+   │ USER                    │
+   ├─────────────────────────┤
+   │ Username: user          │
+   │ Password: user123       │
+   │ Max Streams: 2          │
+   └─────────────────────────┘
+
+OPSI 2: Setup Manual
+────────────────────────────────────────
+1. Jalankan aplikasi: npm start
+
+2. Buka browser: http://localhost:7575
+
+3. Anda akan diarahkan ke Setup Admin Account
+
+4. Buat akun admin pertama
+
+5. Login dan mulai gunakan!
+
+👥 MANAJEMEN USER (ADMIN):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Login sebagai admin
+2. Klik menu "Users" di sidebar
+3. Klik "Create New User" untuk buat user baru
+4. Atur "Max Streams Limit":
+   • -1 = Unlimited streams
+   • 1, 2, 3, dst = Batasi jumlah stream
+
+🎥 BATASAN LIVE STREAMING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Admin dapat set limit per user
+• User tidak bisa buat/start stream melebihi limit
+• Contoh: User dengan limit 2 stream
+  ✅ Bisa buat stream ke-1
+  ✅ Bisa buat stream ke-2
+  ❌ Tidak bisa buat stream ke-3 (harus hapus dulu)
+
+📖 DOKUMENTASI LENGKAP:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Baca: LOGIN_SYSTEM_GUIDE.md
+
+🔧 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lupa password admin?
+→ Jalankan: node quick-reset-admin.js
+
+Reset database & buat ulang?
+→ Jalankan: node reset-database-fresh.js
+→ Lalu: node create-demo-users.js
+
+💡 TIPS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Auto-login sudah DINONAKTIFKAN
+• Semua user harus login dengan username & password
+• Admin bisa ubah limit stream kapan saja
+• User yang signup sendiri default unlimited streams
+  (admin bisa ubah nanti)
+
+╔════════════════════════════════════════════════════════════════╗
+║  Selamat menggunakan StreamFlow dengan sistem login baru! 🎉  ║
+╚════════════════════════════════════════════════════════════════╝

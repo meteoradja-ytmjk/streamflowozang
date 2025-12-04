@@ -17,6 +17,8 @@
     "admin:activate": "node activate-all-users.js",
     "admin:verify": "node verify-admin.js",
     "admin:test-login": "node test-login.js",
+    "admin:reset-user-password": "node admin-reset-user-password.js",
+    "users:create-demo": "node create-demo-users.js",
     "db:reset": "node reset-database-fresh.js",
     "db:reset-safe": "node reset-safe.js",
     "db:check": "node check-db.js",

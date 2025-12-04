@@ -1,0 +1,37 @@
+╔════════════════════════════════════════════════════════════════╗
+║                    QUICK REFERENCE                             ║
+║              Perubahan Terbaru StreamFlow                      ║
+╚════════════════════════════════════════════════════════════════╝
+
+🎨 PERUBAHAN UI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Icon GitHub di pojok kanan - DIHAPUS
+✅ Icon Notification Bell - DIHAPUS  
+✅ Footer sekarang: Link WhatsApp (089621453431)
+
+🔑 FORGOT PASSWORD:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+USER LUPA PASSWORD:
+1. Klik "Forgot Password?" di login
+2. WhatsApp admin: 089621453431
+3. Berikan username
+4. Terima password baru
+
+ADMIN RESET PASSWORD:
+• Via Web: Users → Edit → New Password
+• Via CLI: npm run admin:reset-user-password
+• Via Batch: RESET_USER_PASSWORD.bat
+
+📞 KONTAK:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WhatsApp: 089621453431
+Link: https://wa.me/6289621453431
+
+📖 DOKUMENTASI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• FORGOT_PASSWORD_GUIDE.md
+• LOGIN_SYSTEM_GUIDE.md
+• UPDATE_SUMMARY.txt
+
+✅ SELESAI!
