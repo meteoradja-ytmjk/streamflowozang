@@ -469,9 +469,7 @@ app.post('/setup-account', upload.single('avatar'), [
     .matches(/[a-z]/).withMessage('Password must contain at least one lowercase letter')
     .matches(/[A-Z]/).withMessage('Password must contain at least one uppercase letter')
     .matches(/[0-9]/).withMessage('Password must contain at least one number'),
-  body('confirmPassword')
-    .custom((value, { req }) => value === req.body.password)
-    .withMessage('Passwords do not match')
+
 ], async (req, res) => {
   try {
     const errors = validationResult(req);

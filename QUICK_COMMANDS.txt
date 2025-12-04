@@ -1,0 +1,215 @@
+╔════════════════════════════════════════════════════════════════╗
+║              STREAMFLOW - QUICK COMMANDS                       ║
+╚════════════════════════════════════════════════════════════════╝
+
+🚀 START APPLICATION
+════════════════════════════════════════════════════════════════
+
+Windows:
+  START_APP.bat
+
+Linux/Mac:
+  npm start
+
+URL:
+  http://localhost:7575
+
+
+🔐 DEFAULT LOGIN
+════════════════════════════════════════════════════════════════
+
+Username: admin
+Password: Admin123
+
+⚠️  Ganti password setelah login pertama!
+
+
+🔧 RESET ADMIN
+════════════════════════════════════════════════════════════════
+
+Windows:
+  reset-admin-default.bat
+
+Linux/Mac:
+  node reset-admin-default.js
+
+Hasil:
+  Username: admin
+  Password: Admin123
+
+
+🗑️  RESET DATABASE (HAPUS SEMUA DATA)
+════════════════════════════════════════════════════════════════
+
+node reset-complete-fresh.js
+
+Pilihan:
+  - yes = Gunakan admin/Admin123
+  - no  = Input custom credentials
+
+
+📖 DOKUMENTASI
+════════════════════════════════════════════════════════════════
+
+Quick Start:
+  README_LOGIN_UPDATE.txt
+
+Panduan Lengkap:
+  LOGIN_GUIDE.md
+
+Visual Diagram:
+  VISUAL_LOGIN_FLOW.txt
+
+Index Dokumentasi:
+  INDEX_DOKUMENTASI_LOGIN.md
+
+Detail Perubahan:
+  PERUBAHAN_LOGIN.md
+
+Deployment:
+  DEPLOYMENT_CHECKLIST_LOGIN.md
+
+
+🧪 TESTING
+════════════════════════════════════════════════════════════════
+
+Test Complete Setup:
+  1. Buka: http://localhost:7575/setup-account
+  2. Isi form (tanpa confirm password)
+  3. Klik "Complete Setup"
+
+Test Login:
+  1. Buka: http://localhost:7575/login
+  2. Login: admin / Admin123
+  3. Verifikasi dashboard
+
+
+🔍 TROUBLESHOOTING
+════════════════════════════════════════════════════════════════
+
+Tidak bisa login:
+  → reset-admin-default.bat
+
+Lupa password:
+  → reset-admin-default.bat
+
+Too many attempts:
+  → Tunggu 15 menit atau restart app
+
+Complete Setup error:
+  → node reset-complete-fresh.js
+
+
+📊 MONITORING
+════════════════════════════════════════════════════════════════
+
+Check Status:
+  pm2 status
+
+View Logs:
+  pm2 logs streamflow
+
+Restart App:
+  pm2 restart streamflow
+
+Stop App:
+  pm2 stop streamflow
+
+
+💾 BACKUP
+════════════════════════════════════════════════════════════════
+
+Backup Database:
+  cp db/streamflow.db db/streamflow.db.backup
+
+Restore Database:
+  cp db/streamflow.db.backup db/streamflow.db
+
+
+🔒 SECURITY
+════════════════════════════════════════════════════════════════
+
+Ganti Password:
+  1. Login ke dashboard
+  2. Buka Settings
+  3. Update password
+  4. Save changes
+
+Check User Role:
+  SELECT username, user_role, status FROM users;
+
+
+📁 FILE LOCATIONS
+════════════════════════════════════════════════════════════════
+
+Database:
+  db/streamflow.db
+
+Sessions:
+  db/sessions.db
+
+Logs:
+  logs/
+
+Uploads:
+  public/uploads/
+
+Config:
+  .env
+
+
+🌐 URLS
+════════════════════════════════════════════════════════════════
+
+Login:
+  http://localhost:7575/login
+
+Complete Setup:
+  http://localhost:7575/setup-account
+
+Dashboard:
+  http://localhost:7575/dashboard
+
+Settings:
+  http://localhost:7575/settings
+
+Users (Admin):
+  http://localhost:7575/users
+
+
+🎯 QUICK FIXES
+════════════════════════════════════════════════════════════════
+
+Reset Everything:
+  1. node reset-complete-fresh.js
+  2. npm start
+  3. Setup new admin
+
+Reset Admin Only:
+  1. reset-admin-default.bat
+  2. Login: admin/Admin123
+
+Clear Sessions:
+  1. Stop app
+  2. Delete db/sessions.db
+  3. Start app
+
+
+📞 SUPPORT
+════════════════════════════════════════════════════════════════
+
+Documentation:
+  → INDEX_DOKUMENTASI_LOGIN.md
+
+Visual Guide:
+  → VISUAL_LOGIN_FLOW.txt
+
+Troubleshooting:
+  → LOGIN_GUIDE.md
+
+
+════════════════════════════════════════════════════════════════
+Version: 1.0
+Date: 4 Desember 2024
+Status: ✅ READY
+════════════════════════════════════════════════════════════════

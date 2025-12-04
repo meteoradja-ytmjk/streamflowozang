@@ -11457,3 +11457,41 @@ rtmps://a.rtmp.youtube.com/live2/ugcgucih: I/O error
 2025-12-03T23:33:18.481Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
 2025-12-03T23:38:18.492Z [LOG] [StreamingService] Syncing stream statuses...
 2025-12-03T23:38:18.493Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:43:18.499Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:43:18.500Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:47:28.143Z [LOG] Logger initialized. Output will be written to console and logs/app.log
+2025-12-03T23:47:28.494Z [LOG] Using bundled FFmpeg at: D:\streamflow-main\node_modules\@ffmpeg-installer\win32-x64\ffmpeg.exe
+2025-12-03T23:47:28.497Z [LOG] [RecurringScheduler] Initializing...
+2025-12-03T23:47:28.522Z [ERROR] -----------------------------------
+2025-12-03T23:47:28.526Z [ERROR] UNCAUGHT EXCEPTION: Error: listen EADDRINUSE: address already in use 0.0.0.0:7575
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 7575
+}
+2025-12-03T23:47:28.526Z [ERROR] -----------------------------------
+2025-12-03T23:47:28.529Z [LOG] [RecurringScheduler] Found 0 active templates
+2025-12-03T23:47:28.529Z [LOG] [RecurringScheduler] Initialization complete
+2025-12-03T23:48:18.512Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:48:18.513Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:52:28.504Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:52:28.505Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:53:18.526Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:53:18.528Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:57:28.516Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:57:28.517Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-03T23:58:18.529Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-03T23:58:18.530Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-04T00:02:28.518Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-04T00:02:28.519Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-04T00:03:18.531Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-04T00:03:18.532Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-04T00:07:28.520Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-04T00:07:28.521Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0
+2025-12-04T00:08:18.533Z [LOG] [StreamingService] Syncing stream statuses...
+2025-12-04T00:08:18.534Z [LOG] [StreamingService] Stream status sync completed. Active streams: 0

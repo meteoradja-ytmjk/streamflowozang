@@ -260,21 +260,35 @@ async function resetDatabase() {
   
   console.log('\n📝 Creating new admin account...\n');
   
-  const username = await question('Enter admin username: ');
-  const password = await question('Enter admin password: ');
+  console.log('Default Admin Credentials:');
+  console.log('  Username: admin');
+  console.log('  Password: Admin123\n');
   
-  if (!username || !password) {
-    console.log('\n❌ Username and password are required!');
-    db.close();
-    rl.close();
-    process.exit(1);
-  }
+  const useDefault = await question('Use default credentials? (yes/no): ');
   
-  if (password.length < 6) {
-    console.log('\n❌ Password must be at least 6 characters!');
-    db.close();
-    rl.close();
-    process.exit(1);
+  let username, password;
+  
+  if (useDefault.toLowerCase() === 'yes') {
+    username = 'admin';
+    password = 'Admin123';
+    console.log('\n✅ Using default credentials');
+  } else {
+    username = await question('Enter admin username: ');
+    password = await question('Enter admin password: ');
+    
+    if (!username || !password) {
+      console.log('\n❌ Username and password are required!');
+      db.close();
+      rl.close();
+      process.exit(1);
+    }
+    
+    if (password.length < 6) {
+      console.log('\n❌ Password must be at least 6 characters!');
+      db.close();
+      rl.close();
+      process.exit(1);
+    }
   }
   
   const hashedPassword = await bcrypt.hash(password, 10);
