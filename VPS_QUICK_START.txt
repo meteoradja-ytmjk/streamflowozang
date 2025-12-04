@@ -1,0 +1,279 @@
+╔════════════════════════════════════════════════════════════════╗
+║         STREAMFLOW - VPS DEPLOYMENT QUICK START                ║
+╚════════════════════════════════════════════════════════════════╝
+
+VPS IP: 103.31.204.105
+
+════════════════════════════════════════════════════════════════
+
+🚀 CARA TERCEPAT - AUTOMATED DEPLOYMENT
+════════════════════════════════════════════════════════════════
+
+Windows:
+  1. Pastikan SSH terinstall (Settings > Apps > Optional Features)
+  2. Double-click: deploy-to-vps.bat
+  3. Tunggu proses selesai
+  4. Buka: http://103.31.204.105:7575
+  5. Login: admin / Admin123
+
+Linux/Mac:
+  1. chmod +x deploy-to-vps.sh
+  2. ./deploy-to-vps.sh
+  3. Tunggu proses selesai
+  4. Buka: http://103.31.204.105:7575
+  5. Login: admin / Admin123
+
+════════════════════════════════════════════════════════════════
+
+📋 CARA MANUAL - STEP BY STEP
+════════════════════════════════════════════════════════════════
+
+1. KONEKSI KE VPS
+   ssh root@103.31.204.105
+
+2. INSTALL DEPENDENCIES
+   sudo apt update && sudo apt upgrade -y
+   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+   sudo apt install -y nodejs
+   sudo npm install -g pm2
+
+3. UPLOAD PROJECT
+   Gunakan WinSCP atau FileZilla:
+   - Host: 103.31.204.105
+   - Username: root
+   - Upload ke: /var/www/streamflow
+
+4. SETUP DI VPS
+   cd /var/www/streamflow
+   npm install
+   cp .env.example .env
+   nano .env  # Edit SESSION_SECRET
+   node reset-admin-default.js  # Ketik: yes
+
+5. START APLIKASI
+   pm2 start app.js --name streamflow
+   pm2 save
+   pm2 startup
+
+6. KONFIGURASI FIREWALL
+   sudo ufw allow 7575/tcp
+   sudo ufw allow 22/tcp
+   sudo ufw enable
+
+7. AKSES APLIKASI
+   http://103.31.204.105:7575
+   Login: admin / Admin123
+
+════════════════════════════════════════════════════════════════
+
+🔧 TOOLS YANG DIBUTUHKAN
+════════════════════════════════════════════════════════════════
+
+Windows:
+  ✓ SSH Client (built-in di Windows 10/11)
+  ✓ WinSCP (https://winscp.net) - untuk upload file
+  ✓ PuTTY (https://putty.org) - alternatif SSH
+
+Linux/Mac:
+  ✓ SSH (sudah terinstall)
+  ✓ SCP (sudah terinstall)
+
+════════════════════════════════════════════════════════════════
+
+📦 YANG AKAN DI-DEPLOY
+════════════════════════════════════════════════════════════════
+
+✓ Aplikasi StreamFlow
+✓ Database SQLite
+✓ Admin default (admin/Admin123)
+✓ PM2 process manager
+✓ Auto-start on reboot
+✓ Firewall configuration
+
+════════════════════════════════════════════════════════════════
+
+🌐 AKSES SETELAH DEPLOY
+════════════════════════════════════════════════════════════════
+
+URL Aplikasi:
+  http://103.31.204.105:7575
+
+Login Page:
+  http://103.31.204.105:7575/login
+
+Dashboard:
+  http://103.31.104.105:7575/dashboard
+
+Default Credentials:
+  Username: admin
+  Password: Admin123
+
+⚠️  WAJIB GANTI PASSWORD SETELAH LOGIN PERTAMA!
+
+════════════════════════════════════════════════════════════════
+
+🔍 VERIFIKASI DEPLOYMENT
+════════════════════════════════════════════════════════════════
+
+1. Check aplikasi running:
+   ssh root@103.31.204.105 "pm2 status"
+
+2. Check logs:
+   ssh root@103.31.204.105 "pm2 logs streamflow"
+
+3. Test dari browser:
+   http://103.31.204.105:7575
+
+4. Test login:
+   Username: admin
+   Password: Admin123
+
+════════════════════════════════════════════════════════════════
+
+🚨 TROUBLESHOOTING
+════════════════════════════════════════════════════════════════
+
+Tidak bisa SSH:
+  → Check firewall VPS
+  → Check SSH service: systemctl status sshd
+  → Check port 22 terbuka
+
+Tidak bisa akses aplikasi:
+  → Check PM2: pm2 status
+  → Check firewall: sudo ufw status
+  → Check port 7575: sudo netstat -tulpn | grep 7575
+
+Error saat deploy:
+  → Check logs: pm2 logs streamflow
+  → Restart: pm2 restart streamflow
+  → Reset: node reset-complete-fresh.js
+
+════════════════════════════════════════════════════════════════
+
+📞 COMMANDS PENTING
+════════════════════════════════════════════════════════════════
+
+SSH ke VPS:
+  ssh root@103.31.204.105
+
+Check status:
+  pm2 status
+
+View logs:
+  pm2 logs streamflow
+
+Restart app:
+  pm2 restart streamflow
+
+Stop app:
+  pm2 stop streamflow
+
+Start app:
+  pm2 start streamflow
+
+Reset admin:
+  cd /var/www/streamflow
+  node reset-admin-default.js
+
+Backup database:
+  cd /var/www/streamflow
+  cp db/streamflow.db db/streamflow.db.backup
+
+════════════════════════════════════════════════════════════════
+
+📚 DOKUMENTASI LENGKAP
+════════════════════════════════════════════════════════════════
+
+Panduan Detail:
+  → VPS_DEPLOYMENT_GUIDE.md
+
+Login System:
+  → LOGIN_GUIDE.md
+
+Quick Commands:
+  → QUICK_COMMANDS.txt
+
+Troubleshooting:
+  → VPS_DEPLOYMENT_GUIDE.md (section Troubleshooting)
+
+════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST DEPLOYMENT
+════════════════════════════════════════════════════════════════
+
+Pre-Deployment:
+  □ SSH access ke VPS
+  □ Node.js terinstall di VPS
+  □ PM2 terinstall di VPS
+  □ Firewall dikonfigurasi
+
+Deployment:
+  □ Project di-upload ke VPS
+  □ Dependencies terinstall
+  □ .env dikonfigurasi
+  □ Admin dibuat
+  □ PM2 running
+  □ Firewall allow port 7575
+
+Post-Deployment:
+  □ Aplikasi bisa diakses
+  □ Login berhasil
+  □ Password diganti
+  □ Backup schedule disetup
+
+════════════════════════════════════════════════════════════════
+
+🔒 SECURITY CHECKLIST
+════════════════════════════════════════════════════════════════
+
+□ Ganti password default admin
+□ Ganti SESSION_SECRET di .env
+□ Setup firewall dengan benar
+□ Disable root login (optional)
+□ Setup SSL/HTTPS (optional)
+□ Setup Fail2Ban (optional)
+□ Regular database backup
+
+════════════════════════════════════════════════════════════════
+
+📊 MONITORING
+════════════════════════════════════════════════════════════════
+
+Check Status:
+  pm2 status
+
+Monitor Resources:
+  pm2 monit
+
+View Logs:
+  pm2 logs streamflow --lines 100
+
+Check Disk Space:
+  df -h
+
+Check Memory:
+  free -h
+
+Check CPU:
+  top
+
+════════════════════════════════════════════════════════════════
+
+🎯 NEXT STEPS SETELAH DEPLOY
+════════════════════════════════════════════════════════════════
+
+1. Login ke aplikasi
+2. Ganti password default
+3. Upload video pertama
+4. Test streaming
+5. Setup backup otomatis
+6. Monitor logs dan performance
+7. (Optional) Setup domain dan SSL
+
+════════════════════════════════════════════════════════════════
+
+Status: ✅ READY FOR DEPLOYMENT
+VPS IP: 103.31.204.105
+Date: 4 Desember 2024
+
+════════════════════════════════════════════════════════════════
