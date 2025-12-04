@@ -26,7 +26,13 @@
     "pm2:stop": "pm2 stop streamflow",
     "pm2:restart": "pm2 restart streamflow",
     "pm2:logs": "pm2 logs streamflow",
-    "pm2:status": "pm2 status"
+    "pm2:status": "pm2 status",
+    "start:optimized": "node --max-old-space-size=384 --optimize-for-size app.js",
+    "pm2:optimized": "pm2 start ecosystem.config.js",
+    "cleanup": "node cleanup-memory.js",
+    "monitor": "pm2 monit",
+    "db:optimize": "node optimize-database.js",
+    "optimize:all": "node optimize-performance.js && node optimize-database.js"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
@@ -60,4 +66,3 @@
     "nodemon": "^3.0.1"
   }
 }
-

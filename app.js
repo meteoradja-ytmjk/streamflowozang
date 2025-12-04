@@ -1,4 +1,36 @@
 require('dotenv').config();
+// ========================================
+// PERFORMANCE OPTIMIZATION
+// ========================================
+
+// Garbage collection hints
+if (global.gc) {
+  setInterval(() => {
+    global.gc();
+  }, 60000); // GC setiap 1 menit
+}
+
+// Memory monitoring
+setInterval(() => {
+  const used = process.memoryUsage();
+  const heapUsedMB = Math.round(used.heapUsed / 1024 / 1024);
+  const heapTotalMB = Math.round(used.heapTotal / 1024 / 1024);
+  
+  if (heapUsedMB > 350) {
+    console.warn(`⚠️  High memory usage: ${heapUsedMB}MB / ${heapTotalMB}MB`);
+    if (global.gc) global.gc();
+  }
+}, 30000); // Check setiap 30 detik
+
+// Process optimization
+process.on('warning', (warning) => {
+  if (warning.name === 'MaxListenersExceededWarning') {
+    console.warn('MaxListeners warning suppressed');
+  }
+});
+
+// ========================================
+
 require('./services/logger.js');
 const express = require('express');
 const path = require('path');

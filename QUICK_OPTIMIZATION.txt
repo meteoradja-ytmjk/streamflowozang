@@ -1,0 +1,117 @@
+╔════════════════════════════════════════════════════════════╗
+║         STREAMFLOW - OPTIMASI RAM & CPU                   ║
+║                  Quick Reference                           ║
+╚════════════════════════════════════════════════════════════╝
+
+📊 STATUS AWAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RAM Usage    : 353.69 MB / 961.50 MB (36.8%)
+CPU Usage    : 4%
+
+📊 TARGET SETELAH OPTIMASI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RAM Usage    : 250-300 MB (turun ~20-30%)
+CPU Usage    : 2-5% (idle), 15-25% (streaming)
+
+🚀 CARA MENJALANKAN (PILIH SALAH SATU)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. WINDOWS (Recommended)
+   ► Double-click: START_OPTIMIZED.bat
+
+2. NPM SCRIPT
+   ► npm run start:optimized
+
+3. PM2 (Production)
+   ► npm run pm2:optimized
+   ► pm2 restart streamflow
+
+📈 MONITORING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Real-time Monitor:
+  ► MONITOR_PERFORMANCE.bat (Windows)
+  ► npm run monitor
+
+Check Status:
+  ► pm2 status
+  ► pm2 monit
+  ► pm2 logs streamflow
+
+🧹 CLEANUP MEMORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Manual Cleanup:
+  ► npm run cleanup
+  ► node cleanup-memory.js
+
+Auto Cleanup (Recommended):
+  ► Jalankan setiap hari jam 3 pagi
+  ► Atau setelah streaming selesai
+
+⚙️ OPTIMASI YANG DITERAPKAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Memory limit: 512MB (auto-restart jika melebihi)
+✓ Node.js heap: 384MB
+✓ Auto garbage collection setiap 1 menit
+✓ Memory monitoring setiap 30 detik
+✓ Session timeout: 1 jam (dari 24 jam)
+✓ Upload limit: 500MB (dari 10GB)
+✓ FFmpeg preset: veryfast
+✓ Kill timeout: 3s (lebih cepat)
+✓ Old logs cleanup otomatis
+
+🔧 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Memory masih tinggi?
+  1. pm2 restart streamflow
+  2. npm run cleanup
+  3. Turunkan max_memory_restart ke 384M
+
+CPU spike?
+  1. Kurangi concurrent streams
+  2. Batasi upload size
+  3. Check FFmpeg processes
+
+Aplikasi sering restart?
+  1. Naikkan max_memory_restart ke 768M
+  2. pm2 logs streamflow
+  3. Identifikasi memory leak
+
+📝 FILE YANG DIBUAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ optimize-performance.js      - Main optimizer
+✓ apply-app-optimization.js    - App.js optimizer
+✓ cleanup-memory.js            - Memory cleanup
+✓ START_OPTIMIZED.bat          - Optimized startup
+✓ MONITOR_PERFORMANCE.bat      - Performance monitor
+✓ OPTIMIZATION_GUIDE.md        - Detailed guide
+✓ QUICK_OPTIMIZATION.txt       - This file
+
+📚 DOKUMENTASI LENGKAP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Baca: OPTIMIZATION_GUIDE.md
+
+💡 TIPS TAMBAHAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Restart aplikasi setiap 24 jam (cron job)
+2. Monitor memory usage secara berkala
+3. Cleanup old videos/logs secara rutin
+4. Batasi max concurrent streams per user
+5. Gunakan CDN untuk static files (jika ada)
+
+⚠️  PENTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Setelah optimasi, WAJIB restart aplikasi:
+  ► pm2 restart streamflow
+  ► Atau jalankan START_OPTIMIZED.bat
+
+╔════════════════════════════════════════════════════════════╗
+║  Optimasi selesai! Aplikasi siap berjalan lebih efisien   ║
+╚════════════════════════════════════════════════════════════╝
