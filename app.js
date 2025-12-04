@@ -229,22 +229,36 @@ const csrfProtection = function (req, res, next) {
   next();
 };
 const isAuthenticated = async (req, res, next) => {
+  // Auto-login: Jika tidak ada session, buat session default
   if (!req.session.userId) {
-    return res.redirect('/login');
-  }
-  
-  try {
-    const user = await User.findById(req.session.userId);
-    if (!user || user.status !== 'active') {
-      req.session.destroy();
-      return res.redirect('/login');
+    try {
+      // Cari user pertama yang ada di database
+      const users = await User.findAll();
+      if (users && users.length > 0) {
+        const defaultUser = users[0]; // Gunakan user pertama
+        req.session.userId = defaultUser.id;
+        req.session.username = defaultUser.username;
+        req.session.avatar_path = defaultUser.avatar_path;
+        req.session.user_role = defaultUser.user_role;
+      } else {
+        // Jika tidak ada user, buat user default
+        const defaultUser = await User.create({
+          username: 'admin',
+          password: 'admin123',
+          avatar_path: null,
+          user_role: 'admin',
+          status: 'active'
+        });
+        req.session.userId = defaultUser.id;
+        req.session.username = defaultUser.username;
+        req.session.avatar_path = defaultUser.avatar_path;
+        req.session.user_role = defaultUser.user_role;
+      }
+    } catch (error) {
+      console.error('Auto-login error:', error);
     }
-    req.user = user;
-    next();
-  } catch (error) {
-    console.error('Authentication error:', error);
-    res.redirect('/login');
   }
+  return next();
 };
 
 const isAdmin = async (req, res, next) => {
@@ -305,263 +319,44 @@ const loginDelayMiddleware = async (req, res, next) => {
   await new Promise(resolve => setTimeout(resolve, 1000));
   next();
 };
-// Login route
+// Login route disabled - auto-login enabled
 app.get('/login', async (req, res) => {
-  if (req.session.userId) {
-    return res.redirect('/dashboard');
-  }
-  
-  try {
-    const hasUsers = await checkIfUsersExist();
-    if (!hasUsers) {
-      return res.redirect('/setup-account');
-    }
-    
-    res.render('login', {
-      title: 'Login',
-      error: null
-    });
-  } catch (error) {
-    console.error('Login page error:', error);
-    res.render('login', {
-      title: 'Login',
-      error: 'An error occurred. Please try again.'
-    });
-  }
+  res.redirect('/dashboard');
 });
 
-// Login POST
-app.post('/login', loginLimiter, loginDelayMiddleware, [
-  body('username').trim().notEmpty().withMessage('Username is required'),
-  body('password').notEmpty().withMessage('Password is required')
-], async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render('login', {
-        title: 'Login',
-        error: errors.array()[0].msg
-      });
-    }
-
-    const { username, password } = req.body;
-    const user = await User.findByUsername(username);
-
-    if (!user) {
-      return res.render('login', {
-        title: 'Login',
-        error: 'Invalid username or password'
-      });
-    }
-
-    if (user.status !== 'active') {
-      return res.render('login', {
-        title: 'Login',
-        error: 'Your account has been deactivated. Please contact administrator.'
-      });
-    }
-
-    const passwordMatch = await User.verifyPassword(password, user.password);
-    if (!passwordMatch) {
-      return res.render('login', {
-        title: 'Login',
-        error: 'Invalid username or password'
-      });
-    }
-
-    req.session.userId = user.id;
-    req.session.username = user.username;
-    req.session.avatar_path = user.avatar_path;
-    req.session.user_role = user.user_role;
-
-    res.redirect('/dashboard');
-  } catch (error) {
-    console.error('Login error:', error);
-    res.render('login', {
-      title: 'Login',
-      error: 'An error occurred during login. Please try again.'
-    });
-  }
+// Login POST disabled - auto-login enabled
+app.post('/login', async (req, res) => {
+  res.redirect('/dashboard');
 });
 
-// Logout
+// Logout disabled - redirect to dashboard
 app.get('/logout', (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      console.error('Logout error:', err);
-    }
-    res.redirect('/login');
-  });
+  res.redirect('/dashboard');
 });
 
-// Forgot Password
+// Forgot Password disabled - auto-login enabled
 app.get('/forgot-password', async (req, res) => {
-  if (req.session.userId) {
-    return res.redirect('/dashboard');
-  }
-  
-  res.render('forgot-password', {
-    title: 'Forgot Password',
-    error: null,
-    success: null
-  });
+  res.redirect('/dashboard');
 });
 
-// Signup route (untuk user biasa mendaftar)
+// Signup route disabled - auto-login enabled
 app.get('/signup', async (req, res) => {
-  if (req.session.userId) {
-    return res.redirect('/dashboard');
-  }
-  
-  try {
-    const hasUsers = await checkIfUsersExist();
-    if (!hasUsers) {
-      return res.redirect('/setup-account');
-    }
-    
-    res.render('signup', {
-      title: 'Sign Up',
-      error: null,
-      success: null
-    });
-  } catch (error) {
-    console.error('Signup page error:', error);
-    res.render('signup', {
-      title: 'Sign Up',
-      error: 'An error occurred. Please try again.',
-      success: null
-    });
-  }
+  res.redirect('/dashboard');
 });
 
-// Signup POST
-app.post('/signup', [
-  body('username')
-    .trim()
-    .isLength({ min: 3, max: 20 })
-    .withMessage('Username must be between 3 and 20 characters')
-    .matches(/^[a-zA-Z0-9_]+$/)
-    .withMessage('Username can only contain letters, numbers, and underscores'),
-  body('password')
-    .isLength({ min: 6 })
-    .withMessage('Password must be at least 6 characters long')
-], async (req, res) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render('signup', {
-        title: 'Sign Up',
-        error: errors.array()[0].msg,
-        success: null
-      });
-    }
-
-    const { username, password } = req.body;
-    
-    const existingUser = await User.findByUsername(username);
-    if (existingUser) {
-      return res.render('signup', {
-        title: 'Sign Up',
-        error: 'Username already exists',
-        success: null
-      });
-    }
-
-    const newUser = await User.create({
-      username: username,
-      password: password,
-      avatar_path: null,
-      user_role: 'user',
-      status: 'active',
-      max_streams: -1
-    });
-
-    res.render('signup', {
-      title: 'Sign Up',
-      error: null,
-      success: 'Account created successfully! You can now login.'
-    });
-  } catch (error) {
-    console.error('Signup error:', error);
-    res.render('signup', {
-      title: 'Sign Up',
-      error: 'An error occurred during registration. Please try again.',
-      success: null
-    });
-  }
+// Signup POST disabled - auto-login enabled
+app.post('/signup', async (req, res) => {
+  res.redirect('/dashboard');
 });
 
-// Setup account (untuk admin pertama)
+// Setup account disabled - auto-login enabled
 app.get('/setup-account', async (req, res) => {
-  try {
-    const hasUsers = await checkIfUsersExist();
-    if (hasUsers) {
-      return res.redirect('/login');
-    }
-    
-    res.render('setup-account', {
-      title: 'Setup Admin Account',
-      error: null
-    });
-  } catch (error) {
-    console.error('Setup account page error:', error);
-    res.render('setup-account', {
-      title: 'Setup Admin Account',
-      error: 'An error occurred. Please try again.'
-    });
-  }
+  res.redirect('/dashboard');
 });
 
-// Setup account POST
-app.post('/setup-account', [
-  body('username')
-    .trim()
-    .isLength({ min: 3, max: 20 })
-    .withMessage('Username must be between 3 and 20 characters')
-    .matches(/^[a-zA-Z0-9_]+$/)
-    .withMessage('Username can only contain letters, numbers, and underscores'),
-  body('password')
-    .isLength({ min: 8 })
-    .withMessage('Password must be at least 8 characters long')
-], async (req, res) => {
-  try {
-    const hasUsers = await checkIfUsersExist();
-    if (hasUsers) {
-      return res.redirect('/login');
-    }
-
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render('setup-account', {
-        title: 'Setup Admin Account',
-        error: errors.array()[0].msg
-      });
-    }
-
-    const { username, password } = req.body;
-
-    const admin = await User.create({
-      username: username,
-      password: password,
-      avatar_path: null,
-      user_role: 'admin',
-      status: 'active',
-      max_streams: -1
-    });
-
-    req.session.userId = admin.id;
-    req.session.username = admin.username;
-    req.session.avatar_path = admin.avatar_path;
-    req.session.user_role = admin.user_role;
-
-    res.redirect('/dashboard');
-  } catch (error) {
-    console.error('Setup account error:', error);
-    res.render('setup-account', {
-      title: 'Setup Admin Account',
-      error: 'An error occurred during setup. Please try again.'
-    });
-  }
+// Setup account POST disabled - auto-login enabled
+app.post('/setup-account', async (req, res) => {
+  res.redirect('/dashboard');
 });
 app.get('/', (req, res) => {
   res.redirect('/dashboard');

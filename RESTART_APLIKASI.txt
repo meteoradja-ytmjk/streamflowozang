@@ -1,0 +1,68 @@
+╔════════════════════════════════════════════════════════════════╗
+║              CARA RESTART APLIKASI DI VPS                      ║
+╚════════════════════════════════════════════════════════════════╝
+
+⚡ AUTO-LOGIN SUDAH DIKEMBALIKAN!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Aplikasi sekarang langsung masuk dashboard tanpa login.
+
+🔄 RESTART APLIKASI (Jalankan di VPS via SSH/PuTTY):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. RESTART PM2:
+   pm2 restart streamflow
+
+2. CEK STATUS:
+   pm2 status
+
+3. CEK LOG (jika ada error):
+   pm2 logs streamflow
+
+4. BUKA BROWSER:
+   http://103.31.204.105:7575
+
+✅ SELESAI! Langsung masuk dashboard tanpa login!
+
+📋 COMMAND LAINNYA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STOP APLIKASI:
+pm2 stop streamflow
+
+START APLIKASI:
+pm2 start streamflow
+
+RESTART APLIKASI:
+pm2 restart streamflow
+
+CEK STATUS:
+pm2 status
+
+CEK LOG:
+pm2 logs streamflow
+
+CEK LOG ERROR:
+pm2 logs streamflow --err
+
+RELOAD APLIKASI (zero downtime):
+pm2 reload streamflow
+
+💡 CATATAN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Setelah restart, tunggu 5-10 detik
+• Refresh browser atau buka tab baru
+• Langsung masuk dashboard tanpa login
+• Jika ada user di database, akan auto-login sebagai user pertama
+• Jika database kosong, akan auto-create user admin
+
+🌐 URL APLIKASI:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+http://103.31.204.105:7575
+
+📞 BUTUH BANTUAN?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WhatsApp: 089621453431
+
+╔════════════════════════════════════════════════════════════════╗
+║  Selamat menggunakan StreamFlow dengan auto-login! 🎉         ║
+╚════════════════════════════════════════════════════════════════╝
